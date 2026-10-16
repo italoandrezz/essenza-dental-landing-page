@@ -31,3 +31,45 @@ h1 span { color: var(--cor-verde-principal); }
 .cartao-cuidado div > span { display: block; margin-bottom: 6px; font-size: 9px; text-transform: uppercase; letter-spacing: .6px; }
 .cartao-cuidado p { font-size: 12px; font-weight: 600; }
 .credito-imagem { position: absolute; right: 18px; bottom: -14px; font-size: 10px; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .inicio { gap: 32px; padding-block: 60px 72px; }
+  h1 { font-size: clamp(42px, 5.5vw, 56px); letter-spacing: -2.5px; }
+  .inicio .sobretitulo { font-size: 9px; letter-spacing: 1.2px; }
+  .inicio .descricao { font-size: 14px; }
+  .inicio-acoes { gap: 8px; align-items: flex-start; flex-direction: column; }
+  .inicio-visual { padding: 8px; }
+  .foto-clinica { aspect-ratio: .67; border-top-left-radius: 100px; border-top-right-radius: 100px; }
+  .inicio-visual::before { border-top-left-radius: 110px; border-top-right-radius: 110px; }
+  .selo-atendimento { right: 0; padding: 10px 12px; font-size: 10px; }
+  .cartao-cuidado { left: -8px; bottom: 36px; padding: 16px; gap: 10px; }
+  .indicadores dl > div { padding-inline: 12px; }
+}
+
+@media (max-width: 767px) {
+  .inicio { grid-template-columns: 1fr; gap: 48px; padding-block: 48px 64px; }
+  .inicio-texto { max-width: 560px; }
+  h1 { font-size: clamp(44px, 8.5vw, 62px); letter-spacing: -2.5px; }
+  .inicio .sobretitulo { margin-bottom: 24px; font-size: 10px; letter-spacing: 1.3px; }
+  .inicio .descricao { max-width: 520px; margin-block: 24px; }
+  .inicio-acoes { gap: 12px 24px; }
+  .indicadores { margin-top: 28px; }
+  .inicio-visual { width: calc(100% - 16px); max-width: 460px; justify-self: center; }
+  .foto-clinica { aspect-ratio: 1; border-top-left-radius: 100px; border-top-right-radius: 100px; }
+  .inicio-visual::before { border-top-left-radius: 110px; border-top-right-radius: 110px; }
+  .selo-atendimento { right: -5px; }
+  .cartao-cuidado { bottom: 28px; left: -8px; padding: 16px; }
+  .credito-imagem { bottom: -16px; font-size: 9px; }
+}
+
+@media (max-width: 479px) {
+  .inicio-acoes { align-items: stretch; flex-direction: column; gap: 4px; }
+  .inicio-acoes .botao { min-height: 52px; font-size: 13px; }
+  .indicadores dl > div { padding-inline: 12px; }
+  .indicadores dt { font-size: 9px; }
+  .indicadores dd { font-size: 20px; }
+  .inicio-visual { padding: 8px; }
+  .selo-atendimento { top: 15%; padding: 10px 12px; font-size: 10px; }
+  .cartao-cuidado { gap: 10px; padding: 14px; }
+  .cartao-cuidado p { font-size: 11px; }
+}

@@ -9,3 +9,14 @@ h2 { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -1.
 .whatsapp-flutuante { position: fixed; z-index: 6; bottom: 24px; right: 24px; display: grid; place-items: center; width: 52px; height: 52px; border: 4px solid var(--cor-verde-gelo); border-radius: 50%; background: var(--cor-verde-escuro); color: var(--cor-branco); box-shadow: 0 5px 20px rgb(23 63 56 / 15%); }
 .whatsapp-flutuante svg { width: 25px; height: 25px; }
 .whatsapp-flutuante:hover { background: #24564c; }
+
+@media (max-width: 1023px) {
+  .clinica-conteudo { gap: 36px; }
+  .clinica { padding-block: 72px; }
+}
+@media (max-width: 767px) {
+  .pagina { padding-top: 16px; }
+  .clinica { padding-block: 56px 88px; }
+  .clinica-conteudo { grid-template-columns: 1fr; gap: 24px; }
+  .whatsapp-flutuante { right: max(12px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+}
