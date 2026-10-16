@@ -1,7 +1,12 @@
 ﻿# Essenza Dental
 
-Estrutura inicial da landing page com React, TypeScript e Vite.
-A implementação visual será feita nas próximas etapas, usando o vídeo de referência.
+Landing page da clínica Essenza, desenvolvida com React, TypeScript e Vite a partir do vídeo de referência.
+
+## Estado atual
+
+A primeira etapa inclui a paleta oficial, estilos globais, botões, cabeçalho simplificado e os textos de abertura e apresentação da clínica. O layout se adapta a telas menores e respeita a preferência por movimento reduzido.
+
+As próximas etapas incluem as fotos e identidade definitivas, navegação completa, tratamentos, diferenciais, depoimentos, perguntas frequentes, contato e rodapé. A fonte atual é provisória até a confirmação da tipografia original.
 
 ## Desenvolvimento local
 
@@ -12,7 +17,7 @@ npm ci
 npm run dev
 ```
 
-Abra o endereço local exibido pelo Vite.
+Abra o endereço exibido no terminal. Para validar e visualizar a compilação:
 
 ```bash
 npm run lint
@@ -20,32 +25,59 @@ npm run build
 npm run preview
 ```
 
-## Fluxo de contribuição
+## Branches e pull requests
 
-A branch principal é `main`. Crie uma branch para cada alteração:
+O projeto mantém duas branches permanentes:
+
+- `main`: versão principal; recebe alterações por pull request.
+- `develop`: desenvolvimento e integração das próximas etapas.
+
+Para iniciar uma etapa:
 
 ```bash
-git switch main
-git pull --ff-only
-git switch -c feat/nome-da-alteracao
+git switch develop
+git pull --ff-only origin develop
 ```
 
 Depois de implementar e validar:
 
 ```bash
+npm run lint
+npm run build
 git add .
-git commit -m "feat: descreve a alteracao"
-git push -u origin feat/nome-da-alteracao
+git commit -m "Adiciona os componentes da seção de tratamentos"
+git push origin develop
 ```
 
-Abra um pull request com destino à `main` e preencha o template.
-O GitHub Actions executa lint e build em cada PR e push para `main`.
-Use squash merge para integrar a alteração e remova a branch após o merge.
+Abra um pull request de `develop` para `main`, preencha o template e aguarde a verificação automática. Integre por squash merge. Preserve a branch `develop` após o merge.
+
+Antes de iniciar a próxima etapa, sincronize as duas branches sem reescrever o histórico:
+
+```bash
+git fetch origin
+git switch develop
+git merge origin/main -m "Sincroniza o desenvolvimento com a versão principal"
+git push origin develop
+```
+
+O GitHub Actions verifica código e compilação nos pushes e pull requests destinados às duas branches. A `main` exige pull request, verificação automática aprovada e conversas resolvidas, inclusive para administradores. Não é exigida aprovação de outra pessoa, permitindo o trabalho individual.
+
+README, documentação, mensagens de commit, títulos e descrições de pull requests devem ser escritos em português. Preserve os nomes técnicos exigidos pelas ferramentas.
+
+## Paleta oficial
+
+| Cor | Código | Uso |
+| --- | --- | --- |
+| Verde gelo | `#EFF9F7` | Fundo principal e seções suaves |
+| Branco | `#FFFFFF` | Cartões e áreas de destaque |
+| Verde principal | `#3D9B8D` | Destaques e elementos da marca |
+| Verde escuro | `#173F38` | Títulos, textos e botões com texto branco |
+| Cinza suave | `#F1F2F2` | Superfícies secundárias e divisórias |
 
 ## Estrutura
 
-- `src/`: componentes, estilos e entrada da aplicação.
+- `src/App.tsx`: composição inicial da página.
+- `src/index.css`: paleta, estilos globais e elementos compartilhados.
+- `src/App.css`: estilos das seções e adaptação a telas menores.
 - `public/`: arquivos estáticos.
-- `.github/`: integração contínua e template de pull request.
-
-O commit inicial contém apenas a base do projeto e sua configuração de colaboração.
+- `.github/`: verificação automática e template de pull request.
