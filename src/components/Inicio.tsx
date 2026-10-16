@@ -30,7 +30,6 @@ export function Inicio() {
           </figure>
           <div className="selo-atendimento"><Icone nome="escudo" /><span>Atendimento seguro</span></div>
           <div className="cartao-cuidado"><span className="icone-cuidado"><Icone nome="coracao" /></span><div><span>Cuidado que acolhe</span><p>Você no centro de tudo</p></div></div>
-          <p className="credito-imagem">Imagem ilustrativa · Unsplash</p>
         </div>
       </div>
     </section>

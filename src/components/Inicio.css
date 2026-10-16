@@ -30,7 +30,6 @@ h1 span { color: var(--cor-verde-principal); }
 .icone-cuidado { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--cor-verde-gelo); }
 .cartao-cuidado div > span { display: block; margin-bottom: 6px; font-size: 9px; text-transform: uppercase; letter-spacing: .6px; }
 .cartao-cuidado p { font-size: 12px; font-weight: 600; }
-.credito-imagem { position: absolute; right: 18px; bottom: -14px; font-size: 10px; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .inicio { gap: 32px; padding-block: 60px 72px; }
@@ -59,7 +58,6 @@ h1 span { color: var(--cor-verde-principal); }
   .inicio-visual::before { border-top-left-radius: 110px; border-top-right-radius: 110px; }
   .selo-atendimento { right: -5px; }
   .cartao-cuidado { bottom: 28px; left: -8px; padding: 16px; }
-  .credito-imagem { bottom: -16px; font-size: 9px; }
 }
 
 @media (max-width: 479px) {
