@@ -14,7 +14,7 @@ As próximas etapas incluem as fotos e identidade definitivas, tratamentos, dife
 
 - O WhatsApp é configurado em `src/config/contato.ts`: `+55 (81) 98567-6610`.
 - A foto é ilustrativa e não representa as instalações da Essenza. Foi obtida por meio desta [imagem do Unsplash](https://images.unsplash.com/photo-1629909613654-28e377c37b09) e está armazenada localmente em `public/imagens/clinica-provisoria.jpg`. Substitua-a pela fotografia oficial antes da publicação definitiva.
-- Os indicadores `12+`, `3 mil` e `4,9` reproduzem o vídeo de referência e estão identificados na interface como ilustrativos. Confirme os dados antes de utilizá-los como informações reais da clínica.
+- Os indicadores `12+`, `3 mil` e `4,9` reproduzem o vídeo de referência. Confirme os dados antes da publicação definitiva.
 
 ## Responsividade
 

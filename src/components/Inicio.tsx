@@ -14,13 +14,12 @@ export function Inicio() {
             <a className="botao" href={contato.whatsapp} target="_blank" rel="noopener noreferrer"><Icone nome="whatsapp" />Agendar pelo WhatsApp<span className="somente-leitor"> (abre em outra aba)</span></a>
             <a className="link-texto" href="#clinica">Conheça a Essenza <Icone nome="seta" /></a>
           </div>
-          <div className="indicadores" aria-describedby="aviso-indicadores">
+          <div className="indicadores">
             <dl>
-              <div><dt>Anos de experiência*</dt><dd>12+</dd></div>
-              <div><dt>Sorrisos cuidados*</dt><dd>3 mil</dd></div>
-              <div><dt>Avaliação média*</dt><dd>4,9</dd></div>
+              <div><dt>Anos de experiência</dt><dd>12+</dd></div>
+              <div><dt>Sorrisos cuidados</dt><dd>3 mil</dd></div>
+              <div><dt>Avaliação média</dt><dd>4,9</dd></div>
             </dl>
-            <p id="aviso-indicadores">* Dados ilustrativos do layout de referência.</p>
           </div>
         </div>
         <div className="inicio-visual">

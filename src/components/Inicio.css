@@ -19,7 +19,6 @@ h1 span { color: var(--cor-verde-principal); }
 .indicadores dl > div:first-child { border: 0; padding-left: 0; }
 .indicadores dt { font-size: 10px; line-height: 1.5; }
 .indicadores dd { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.7px; }
-.indicadores > p { margin-top: 18px; font-size: 10px; line-height: 1.5; }
 .inicio-visual { position: relative; min-width: 0; padding: 12px; }
 .inicio-visual::before { content: ''; position: absolute; inset: 0; border: 1px solid rgb(23 63 56 / 16%); border-radius: 140px 140px 30px 30px; transform: rotate(2deg); }
 .foto-clinica { position: relative; margin: 0; aspect-ratio: .89; border-radius: 130px 130px 22px 22px; overflow: hidden; background: var(--cor-cinza-suave); box-shadow: 0 25px 45px rgb(23 63 56 / 8%); }
