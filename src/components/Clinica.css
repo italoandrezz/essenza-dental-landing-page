@@ -17,3 +17,27 @@
 .clinica-consultorio img { object-position: 47% center; }
 .clinica-detalhe { grid-column: 2 / 4; }
 .clinica-detalhe img { object-position: center 62%; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .clinica { padding-block: 72px; }
+  .clinica-conteudo { gap: 36px; margin-bottom: 40px; }
+  .clinica-mosaico { grid-template-columns: 1fr 1fr; grid-template-rows: auto 220px; }
+  .clinica-ambiente { grid-row: 1; }
+  .clinica-filosofia { padding: 28px; }
+  .clinica-consultorio { grid-column: 1; grid-row: 2; }
+  .clinica-detalhe { grid-column: 2; grid-row: 2; }
+}
+@media (max-width: 767px) {
+  .clinica { padding-block: 56px; }
+  .clinica-conteudo { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
+  .clinica-mosaico { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto auto 200px; gap: 16px; }
+  .clinica-ambiente { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 1.3; }
+  .clinica-filosofia { grid-column: 1 / -1; padding: 28px; }
+  .clinica-numero { margin-bottom: 24px; }
+  .clinica-filosofia h3 { font-size: 28px; }
+  .clinica-filosofia p { font-size: 14px; }
+  .clinica-filosofia li { font-size: 12px; }
+  .clinica-consultorio { grid-column: 1; }
+  .clinica-mosaico .clinica-consultorio { border-radius: 70px 70px 20px 20px; }
+  .clinica-detalhe { grid-column: 2; }
+}

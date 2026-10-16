@@ -14,3 +14,19 @@
 .tratamento-conteudo p { color: #4c6862; font-size: 12px; line-height: 1.85; }
 .tratamento-seta { position: absolute; right: 20px; bottom: 24px; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--cor-verde-gelo); }
 .tratamento-seta svg { width: 17px; height: 17px; }
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .tratamentos { padding-block: 72px; }
+  .tratamentos-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tratamentos-cabecalho { align-items: flex-start; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+}
+@media (max-width: 599px) {
+  .tratamentos { padding-block: 56px 88px; }
+  .tratamentos-cabecalho { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .tratamentos-quebra { display: none; }
+  .tratamentos-grade { grid-template-columns: 1fr; gap: 24px; }
+  .tratamento-conteudo { padding: 24px 64px 28px 24px; }
+  .tratamento-conteudo h3 { font-size: 22px; }
+  .tratamento-conteudo p { font-size: 14px; }
+  .tratamento-seta { width: 40px; height: 40px; right: 16px; bottom: 24px; }
+}
