@@ -24,8 +24,8 @@ export function PerguntasFrequentes() {
   }
 
   return (
-    <section className="perguntas" id="perguntas-frequentes" aria-labelledby="titulo-perguntas">
-      <div className="container perguntas-conteudo">
+    <section className="perguntas" aria-labelledby="titulo-perguntas">
+      <div className="container perguntas-conteudo" id="perguntas-frequentes">
         <div className="perguntas-introducao">
           <p className="sobretitulo">Perguntas frequentes</p>
           <h2 id="titulo-perguntas">Informação<br className="perguntas-quebra" /> também é uma<br className="perguntas-quebra" /> forma de<br className="perguntas-quebra" /> cuidado</h2>
@@ -55,3 +55,4 @@ export function PerguntasFrequentes() {
     </section>
   )
 }
+

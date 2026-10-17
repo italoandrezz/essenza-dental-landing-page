@@ -4,9 +4,9 @@ import './Inicio.css'
 
 export function Inicio() {
   return (
-    <section className="faixa-inicio" id="inicio" aria-labelledby="titulo-inicio">
+    <section className="faixa-inicio" aria-labelledby="titulo-inicio">
       <div className="inicio container">
-        <div className="inicio-texto">
+        <div className="inicio-texto" id="inicio">
           <p className="sobretitulo"><Icone nome="brilho" /> Odontologia feita para você</p>
           <h1 id="titulo-inicio">Seu sorriso<br />começa com<br />um <span>cuidado<br className="quebra-titulo" /> especial</span></h1>
           <p className="descricao">Uma experiência odontológica acolhedora, onde tecnologia, atenção e delicadeza se encontram para cuidar de você por inteiro.</p>
@@ -34,3 +34,4 @@ export function Inicio() {
     </section>
   )
 }
+

@@ -2,8 +2,8 @@
 
 export function Clinica() {
   return (
-    <section className="clinica" id="clinica" aria-labelledby="titulo-clinica">
-      <div className="container">
+    <section className="clinica" aria-labelledby="titulo-clinica">
+      <div className="container" id="clinica">
         <div className="clinica-conteudo">
           <div>
             <p className="sobretitulo">A Essenza</p>
@@ -37,3 +37,4 @@ export function Clinica() {
     </section>
   )
 }
+
