@@ -3,6 +3,8 @@ import { tratamentos } from '../dados/tratamentos'
 import { Icone } from './Icone'
 import './Rodape.css'
 
+const anoAtual = new Date().getFullYear()
+
 const secoes = [
   { nome: 'A clínica', destino: '#clinica' },
   { nome: 'Tratamentos', destino: '#tratamentos' },
@@ -37,7 +39,7 @@ export function Rodape() {
           </div>
         </div>
         <div className="rodape-base">
-          <p>© {new Date().getFullYear()} Essenza Odontologia. Todos os direitos reservados.</p>
+          <p>© {anoAtual} Essenza Odontologia. Todos os direitos reservados.</p>
           <a href="#inicio">Voltar ao início <Icone nome="seta" /></a>
         </div>
       </div>
