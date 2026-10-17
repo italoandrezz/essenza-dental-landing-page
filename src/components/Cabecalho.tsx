@@ -52,10 +52,12 @@ export function Cabecalho() {
         <a href="#inicio" onClick={() => definirMenuAberto(false)}>Início</a>
         <a href="#clinica" onClick={() => definirMenuAberto(false)}>A clínica</a>
         <a href="#tratamentos" onClick={() => definirMenuAberto(false)}>Tratamentos</a>
+        <a href="#diferenciais" onClick={() => definirMenuAberto(false)}>Diferenciais</a>
         <a href={contato.whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => definirMenuAberto(false)}>Contato <span className="somente-leitor">pelo WhatsApp (abre em outra aba)</span></a>
         <a className="botao agendar-cabecalho" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => definirMenuAberto(false)}>Agendar consulta <Icone nome="seta" /><span className="somente-leitor">pelo WhatsApp (abre em outra aba)</span></a>
       </nav>
     </header>
   )
 }
+
 

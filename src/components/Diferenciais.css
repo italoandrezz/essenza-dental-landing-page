@@ -1,0 +1,14 @@
+﻿.diferenciais { padding-block: 112px; background: var(--cor-verde-gelo); }
+.diferenciais-conteudo { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: 100px; }
+.diferenciais-introducao { padding-top: 8px; }
+.diferenciais-introducao .descricao { max-width: 380px; margin-block: 26px 32px; }
+.diferenciais-botao { border: 1px solid rgb(23 63 56 / 28%); background: transparent; color: var(--cor-verde-escuro); font-size: 12px; }
+.diferenciais-botao:hover { background: var(--cor-verde-escuro); color: var(--cor-branco); }
+.diferenciais-lista { margin: 0; padding: 0; list-style: none; }
+.diferenciais-lista li { display: grid; grid-template-columns: 44px 24px minmax(0, 1fr); align-items: start; gap: 20px; padding-block: 30px; border-top: 1px solid rgb(23 63 56 / 13%); }
+.diferenciais-lista li:last-child { border-bottom: 1px solid rgb(23 63 56 / 13%); }
+.diferenciais-icone { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: var(--cor-branco); color: var(--cor-verde-escuro); }
+.diferenciais-icone svg { width: 22px; height: 22px; }
+.diferenciais-numero { padding-top: 6px; font-size: 10px; letter-spacing: 1px; }
+.diferenciais-lista h3 { margin: 2px 0 10px; font-size: 19px; font-weight: 500; line-height: 1.35; letter-spacing: -.4px; }
+.diferenciais-lista p { color: #4c6862; font-size: 13px; line-height: 1.85; }
