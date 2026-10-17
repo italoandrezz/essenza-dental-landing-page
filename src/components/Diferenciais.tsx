@@ -19,18 +19,17 @@ export function Diferenciais() {
           <p className="descricao">Mais do que tratar sorrisos, queremos transformar a forma como você se sente ao cuidar da sua saúde.</p>
           <a className="botao diferenciais-botao" href={contato.whatsapp} target="_blank" rel="noopener noreferrer">Viva essa experiência <Icone nome="seta" /><span className="somente-leitor"> pelo WhatsApp (abre em outra aba)</span></a>
         </div>
-        <ol className="diferenciais-lista">
-          {diferenciais.map((diferencial, indice) => (
+        <ul className="diferenciais-lista">
+          {diferenciais.map(diferencial => (
             <li key={diferencial.titulo}>
               <span className="diferenciais-icone"><Icone nome={diferencial.icone} /></span>
-              <span className="diferenciais-numero" aria-hidden="true">{String(indice + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{diferencial.titulo}</h3>
                 <p>{diferencial.descricao}</p>
               </div>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   )
