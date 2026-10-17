@@ -1,6 +1,6 @@
 ﻿import type { SVGProps } from 'react'
 
-type NomeIcone = 'seta' | 'whatsapp' | 'coracao' | 'escudo' | 'brilho' | 'menu' | 'fechar' | 'tecnologia'
+type NomeIcone = 'seta' | 'whatsapp' | 'coracao' | 'escudo' | 'brilho' | 'menu' | 'fechar' | 'tecnologia' | 'localizacao' | 'relogio' | 'calendario'
 
 const desenhos: Record<NomeIcone, React.ReactNode> = {
   seta: <><path d="M4 12h16M14 6l6 6-6 6" /></>,
@@ -10,10 +10,14 @@ const desenhos: Record<NomeIcone, React.ReactNode> = {
   brilho: <><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z" /><path d="M21 2v4M19 4h4" /></>,
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
   tecnologia: <><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4M9 10h6M12 7v6" /></>,
+  localizacao: <><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></>,
+  relogio: <><circle cx="12" cy="12" r="9" /><path d="M12 6v6l4 2" /></>,
+  calendario: <><rect x="4" y="5" width="16" height="16" rx="2" /><path d="M8 3v4M16 3v4M4 11h16" /></>,
   fechar: <path d="m6 6 12 12M6 18 18 6" />,
 }
 
 export function Icone({ nome, ...props }: SVGProps<SVGSVGElement> & { nome: NomeIcone }) {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{desenhos[nome]}</svg>
 }
+
 

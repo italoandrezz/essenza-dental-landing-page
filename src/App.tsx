@@ -3,7 +3,12 @@ import { Icone } from './components/Icone'
 import { Inicio } from './components/Inicio'
 import { Clinica } from './components/Clinica'
 import { Tratamentos } from './components/Tratamentos'
+import { Equipe } from './components/Equipe'
 import { Diferenciais } from './components/Diferenciais'
+import { Experiencias } from './components/Experiencias'
+import { PerguntasFrequentes } from './components/PerguntasFrequentes'
+import { Contato } from './components/Contato'
+import { Rodape } from './components/Rodape'
 import { contato } from './config/contato'
 import './App.css'
 
@@ -16,14 +21,26 @@ function App() {
         <Inicio />
         <Clinica />
         <Tratamentos />
+        <Equipe />
         <Diferenciais />
+        <Experiencias />
+        <PerguntasFrequentes />
+        <Contato />
       </main>
-      <a className="whatsapp-flutuante" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Essenza pelo WhatsApp (abre em outra aba)"><Icone nome="whatsapp" /></a>
+      <Rodape />
+      <aside aria-label="Contato rápido">
+        <a className="whatsapp-flutuante" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Essenza pelo WhatsApp (abre em outra aba)"><Icone nome="whatsapp" /></a>
+      </aside>
     </div>
   )
 }
 
 export default App
+
+
+
+
+
 
 
 

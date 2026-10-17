@@ -1,0 +1,34 @@
+﻿.perguntas { padding-block: 108px; background: var(--cor-branco); }
+.perguntas-conteudo { display: grid; grid-template-columns: .8fr 1.2fr; align-items: start; gap: 100px; }
+.perguntas-introducao { min-width: 0; padding-top: 8px; }
+.perguntas-introducao .descricao { max-width: 360px; margin-block: 26px 20px; }
+.perguntas-introducao .link-texto { justify-content: flex-start; text-align: left; }
+.perguntas-lista { min-width: 0; }
+.perguntas-item { border-top: 1px solid rgb(23 63 56 / 14%); }
+.perguntas-item:last-child { border-bottom: 1px solid rgb(23 63 56 / 14%); }
+.perguntas-item h3 { margin: 0; }
+.perguntas-item button { display: grid; grid-template-columns: 28px minmax(0, 1fr) 18px; align-items: start; gap: 18px; width: 100%; min-height: 74px; padding: 25px 8px 25px 0; border: 0; border-radius: 4px; background: transparent; color: var(--cor-verde-escuro); font-size: 15px; font-weight: 500; line-height: 1.6; text-align: left; cursor: pointer; transition: background-color 180ms ease; }
+.perguntas-item button:hover { background: var(--cor-verde-gelo); }
+.perguntas-numero { padding-top: 4px; font-size: 10px; font-weight: 400; letter-spacing: 1px; }
+.perguntas-seta { margin-top: 3px; flex-shrink: 0; transition: transform 180ms ease; }
+.perguntas-item button[aria-expanded='true'] .perguntas-seta { transform: rotate(180deg); }
+.perguntas-resposta { padding: 0 44px 28px 46px; }
+.perguntas-resposta p { color: #4c6862; font-size: 13px; line-height: 1.9; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .perguntas { padding-block: 80px; }
+  .perguntas-conteudo { grid-template-columns: .85fr 1.15fr; gap: 36px; }
+  .perguntas-item button { grid-template-columns: 20px minmax(0, 1fr) 18px; gap: 12px; font-size: 14px; }
+  .perguntas-resposta { padding-left: 32px; padding-right: 30px; }
+}
+@media (max-width: 767px) {
+  .perguntas { padding-block: 56px 88px; }
+  .perguntas-conteudo { grid-template-columns: 1fr; gap: 32px; }
+  .perguntas-introducao { padding-top: 0; }
+  .perguntas-quebra { display: none; }
+  .perguntas-introducao h2 { max-width: 460px; }
+  .perguntas-introducao .descricao { max-width: 520px; margin-block: 22px 16px; }
+  .perguntas-item button { grid-template-columns: 20px minmax(0, 1fr) 18px; gap: 10px; min-height: 72px; padding-block: 22px; }
+  .perguntas-resposta { padding: 0 28px 24px 30px; }
+  .perguntas-resposta p { font-size: 14px; }
+}

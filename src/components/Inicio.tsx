@@ -1,12 +1,13 @@
-﻿import { contato } from '../config/contato'
+﻿import { Imagem } from './Imagem'
+import { contato } from '../config/contato'
 import { Icone } from './Icone'
 import './Inicio.css'
 
 export function Inicio() {
   return (
-    <section className="faixa-inicio" id="inicio" aria-labelledby="titulo-inicio">
+    <section className="faixa-inicio" aria-labelledby="titulo-inicio">
       <div className="inicio container">
-        <div className="inicio-texto">
+        <div className="inicio-texto" id="inicio">
           <p className="sobretitulo"><Icone nome="brilho" /> Odontologia feita para você</p>
           <h1 id="titulo-inicio">Seu sorriso<br />começa com<br />um <span>cuidado<br className="quebra-titulo" /> especial</span></h1>
           <p className="descricao">Uma experiência odontológica acolhedora, onde tecnologia, atenção e delicadeza se encontram para cuidar de você por inteiro.</p>
@@ -24,7 +25,7 @@ export function Inicio() {
         </div>
         <div className="inicio-visual">
           <figure className="foto-clinica">
-            <img src="/imagens/clinica-provisoria.jpg" alt="Consultório odontológico iluminado, com cadeira e equipamentos — imagem ilustrativa." width="1100" height="735" fetchPriority="high" />
+            <Imagem sizes="(max-width: 479px) calc(100vw - 48px), (max-width: 767px) 460px, (max-width: 1023px) calc((100vw - 80px) / 2), 500px" src="/imagens/clinica-provisoria.webp" alt="Consultório odontológico iluminado, com cadeira e equipamentos — imagem ilustrativa." width={1100} height={735} fetchPriority="high" />
             <figcaption className="somente-leitor">Imagem provisória; não representa as instalações da Essenza.</figcaption>
           </figure>
           <div className="selo-atendimento"><Icone nome="escudo" /><span>Atendimento seguro</span></div>
@@ -34,3 +35,5 @@ export function Inicio() {
     </section>
   )
 }
+
+

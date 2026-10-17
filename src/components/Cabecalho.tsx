@@ -24,7 +24,7 @@ export function Cabecalho() {
       }
     }
 
-    const telaGrande = window.matchMedia('(min-width: 1024px)')
+    const telaGrande = window.matchMedia('(min-width: 1200px)')
     function fecharAoAmpliar() {
       if (telaGrande.matches) definirMenuAberto(false)
     }
@@ -41,7 +41,7 @@ export function Cabecalho() {
 
   return (
     <header className="cabecalho container" ref={cabecalho}>
-      <a className="marca" href="#inicio" aria-label="Essenza Odontologia — início" onClick={() => definirMenuAberto(false)}>
+      <a className="marca" href="#inicio" onClick={() => definirMenuAberto(false)}>
         <span className="marca-simbolo"><Icone nome="brilho" /></span>
         <span>essenza<small>ODONTOLOGIA</small></span>
       </a>
@@ -52,12 +52,19 @@ export function Cabecalho() {
         <a href="#inicio" onClick={() => definirMenuAberto(false)}>Início</a>
         <a href="#clinica" onClick={() => definirMenuAberto(false)}>A clínica</a>
         <a href="#tratamentos" onClick={() => definirMenuAberto(false)}>Tratamentos</a>
+        <a href="#equipe" onClick={() => definirMenuAberto(false)}>Equipe</a>
         <a href="#diferenciais" onClick={() => definirMenuAberto(false)}>Diferenciais</a>
-        <a href={contato.whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => definirMenuAberto(false)}>Contato <span className="somente-leitor">pelo WhatsApp (abre em outra aba)</span></a>
+        <a href="#experiencias" onClick={() => definirMenuAberto(false)}>Experiências</a>
+        <a href="#perguntas-frequentes" onClick={() => definirMenuAberto(false)}>Dúvidas</a>
+        <a href="#contato" onClick={() => definirMenuAberto(false)}>Contato</a>
         <a className="botao agendar-cabecalho" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => definirMenuAberto(false)}>Agendar consulta <Icone nome="seta" /><span className="somente-leitor">pelo WhatsApp (abre em outra aba)</span></a>
       </nav>
     </header>
   )
 }
+
+
+
+
 
 
