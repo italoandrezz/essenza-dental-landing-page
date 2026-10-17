@@ -12,6 +12,16 @@
 .diferenciais-lista h3 { margin: 2px 0 10px; font-size: 19px; font-weight: 500; line-height: 1.35; letter-spacing: -.4px; }
 .diferenciais-lista p { color: #4c6862; font-size: 13px; line-height: 1.85; }
 
+@media (hover: hover) and (pointer: fine) {
+  .diferenciais-icone:hover { background: var(--cor-verde-escuro); color: var(--cor-branco); box-shadow: 0 8px 18px rgb(23 63 56 / 14%); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .diferenciais-icone { transition: transform 220ms ease, background-color 220ms ease, color 220ms ease, box-shadow 220ms ease; }
+  .diferenciais-icone svg { transition: transform 220ms ease; }
+  .diferenciais-icone:hover { transform: translateY(-3px); }
+  .diferenciais-icone:hover svg { transform: rotate(-8deg) scale(1.12); }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .diferenciais { padding-block: 80px; }
   .diferenciais-conteudo { grid-template-columns: .9fr 1.1fr; gap: 36px; }
