@@ -14,3 +14,21 @@
 .perguntas-item button[aria-expanded='true'] .perguntas-seta { transform: rotate(180deg); }
 .perguntas-resposta { padding: 0 44px 28px 46px; }
 .perguntas-resposta p { color: #4c6862; font-size: 13px; line-height: 1.9; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .perguntas { padding-block: 80px; }
+  .perguntas-conteudo { grid-template-columns: .85fr 1.15fr; gap: 36px; }
+  .perguntas-item button { grid-template-columns: 20px minmax(0, 1fr) 18px; gap: 12px; font-size: 14px; }
+  .perguntas-resposta { padding-left: 32px; padding-right: 30px; }
+}
+@media (max-width: 767px) {
+  .perguntas { padding-block: 56px 88px; }
+  .perguntas-conteudo { grid-template-columns: 1fr; gap: 32px; }
+  .perguntas-introducao { padding-top: 0; }
+  .perguntas-quebra { display: none; }
+  .perguntas-introducao h2 { max-width: 460px; }
+  .perguntas-introducao .descricao { max-width: 520px; margin-block: 22px 16px; }
+  .perguntas-item button { grid-template-columns: 20px minmax(0, 1fr) 18px; gap: 10px; min-height: 72px; padding-block: 22px; }
+  .perguntas-resposta { padding: 0 28px 24px 30px; }
+  .perguntas-resposta p { font-size: 14px; }
+}
