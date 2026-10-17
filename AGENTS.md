@@ -2,7 +2,8 @@
 
 - Escreva README, documentação, mensagens de commit, títulos e descrições de pull requests em português.
 - Mantenha as branches permanentes `main` e `develop`.
-- Desenvolva na `develop` e integre à `main` por pull request; não faça push direto para `main`.
+- Crie branches temporárias a partir de `develop` para cada etapa e abra seus pull requests com destino exclusivo à `develop`.
+- Não abra PR, faça merge ou envie alterações à `main` durante o desenvolvimento. A integração à `main` é exclusiva da release final, após autorização explícita do usuário.
 - Acumule as etapas na `develop`. Abra o PR para `main` somente quando o projeto estiver pronto para a release final `v1.0.0`; não abra PR a cada etapa.
 - Não exclua a `develop` após integrar um pull request.
 - Use a paleta oficial registrada no README e preserve a referência visual do vídeo fornecido pelo usuário.
