@@ -21,8 +21,8 @@ export function Experiencias() {
   }
 
   return (
-    <section className="experiencias" id="experiencias" aria-labelledby="titulo-experiencias">
-      <div className="container experiencias-conteudo">
+    <section className="experiencias" aria-labelledby="titulo-experiencias">
+      <div className="container experiencias-conteudo" id="experiencias">
         <p className="sobretitulo">Experiências que inspiram</p>
         <h2 id="titulo-experiencias">Cuidado que deixa marcas<br className="experiencias-quebra" /> bonitas</h2>
         <div className="experiencias-carrossel" role="group" aria-roledescription="carrossel" aria-label="Depoimentos demonstrativos" onKeyDown={navegarComTeclado}>
@@ -51,4 +51,5 @@ export function Experiencias() {
     </section>
   )
 }
+
 

@@ -11,8 +11,8 @@ const diferenciais = [
 
 export function Diferenciais() {
   return (
-    <section className="diferenciais" id="diferenciais" aria-labelledby="titulo-diferenciais">
-      <div className="container diferenciais-conteudo">
+    <section className="diferenciais" aria-labelledby="titulo-diferenciais">
+      <div className="container diferenciais-conteudo" id="diferenciais">
         <div className="diferenciais-introducao">
           <p className="sobretitulo">O jeito Essenza</p>
           <h2 id="titulo-diferenciais">O extraordinário<br className="diferenciais-quebra" /> mora nos<br className="diferenciais-quebra" /> detalhes</h2>
@@ -35,3 +35,4 @@ export function Diferenciais() {
     </section>
   )
 }
+

@@ -1,6 +1,8 @@
 ﻿.pular-conteudo { position: fixed; top: 12px; left: 16px; z-index: 10; padding: 12px; background: var(--cor-branco); transform: translateY(-180%); }
 .pular-conteudo:focus { transform: translateY(0); }
 .pagina { min-height: 100svh; padding-top: 24px; background: var(--cor-verde-gelo); }
+/* Permite alinhar a última âncora mesmo quando o conteúdo é menor que a tela. */
+main > section:last-child { min-height: 100svh; }
 .sobretitulo { margin-bottom: 28px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
 .descricao { max-width: 460px; color: #4c6862; font-size: 15px; line-height: 1.85; }
 h2 { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -1.8px; font-weight: 500; }

@@ -5,8 +5,8 @@ import './Tratamentos.css'
 
 export function Tratamentos() {
   return (
-    <section className="tratamentos" id="tratamentos" aria-labelledby="titulo-tratamentos">
-      <div className="container">
+    <section className="tratamentos" aria-labelledby="titulo-tratamentos">
+      <div className="container" id="tratamentos">
         <div className="tratamentos-cabecalho">
           <div>
             <p className="sobretitulo">Nossos tratamentos</p>
@@ -36,3 +36,4 @@ export function Tratamentos() {
     </section>
   )
 }
+

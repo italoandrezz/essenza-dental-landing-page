@@ -7,6 +7,7 @@
   --largura-conteudo: 1120px;
   --raio-cartao: 24px;
   --raio-botao: 14px;
+  --distancia-ancora: 112px;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--cor-verde-escuro);
   background: var(--cor-branco);
@@ -18,7 +19,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--distancia-ancora); }
 body { margin: 0; min-width: 320px; }
 button, input, textarea { font: inherit; }
 a { color: inherit; }
@@ -43,6 +44,12 @@ h1, h2, p { margin: 0; }
   transition: background-color 180ms ease;
 }
 .botao:hover { background: #24564c; }
+@media (max-width: 1023px) {
+  :root { --distancia-ancora: 108px; }
+}
+@media (max-width: 479px) {
+  :root { --distancia-ancora: 100px; }
+}
 @media (max-width: 600px) {
   .container { width: calc(100% - 32px); }
 }
