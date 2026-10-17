@@ -10,7 +10,9 @@ Os botões de agendamento e contato abrem o WhatsApp informado pelo responsável
 
 O menu fecha ao selecionar uma seção, clicar fora, pressionar Escape ou ampliar a tela para desktop. O layout respeita a preferência por movimento reduzido e oferece navegação por teclado e acesso direto ao conteúdo.
 
-As próximas etapas incluem as fotos e identidade definitivas, diferenciais, depoimentos, perguntas frequentes, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
+A seção “O extraordinário mora nos detalhes” apresenta os quatro diferenciais da Essenza: atendimento personalizado, tecnologia moderna, conforto em cada visita e cuidado humanizado. O menu leva à seção, e o botão “Viva essa experiência” abre o WhatsApp.
+
+As próximas etapas incluem as fotos e identidade definitivas, depoimentos, perguntas frequentes, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
 
 ## Contato e conteúdo provisório
 
@@ -26,12 +28,15 @@ As próximas etapas incluem as fotos e identidade definitivas, diferenciais, dep
 - Desktop: navegação expandida a partir de 1024 px e foto ao lado do texto.
 - O mosaico da clínica usa três colunas no desktop e se reorganiza em duas no tablet; no celular, a foto principal e o texto ocupam a largura disponível.
 - A grade de tratamentos usa uma coluna abaixo de 600 px, duas entre 600 e 1023 px e três a partir de 1024 px.
+- Os diferenciais usam introdução e lista lado a lado a partir de 768 px; no celular, o conteúdo fica em uma coluna e o botão ocupa a largura disponível nas telas menores.
 
 Valide também o fechamento do menu por teclado, as âncoras, o carregamento da foto e a ausência de rolagem horizontal. Os links externos informam a abertura de outra aba às tecnologias assistivas.
 
 Nesta etapa, essas verificações passaram em navegador Chromium nas larguras de 320, 390, 600, 768, 820, 1024 e 1440 px, sem erros de execução. Também foram conferidos o fechamento ao clicar fora ou redimensionar a tela e o respeito ao movimento reduzido. Os testes não enviam mensagens ao WhatsApp.
 
 As novas seções foram verificadas nas mesmas sete larguras: carregamento das fotos, quantidade de colunas, âncora de tratamentos, fechamento do menu e conteúdo das seis mensagens do WhatsApp, sem rolagem horizontal ou erros de execução.
+
+A seção de diferenciais também foi validada nessas sete larguras: quatro itens presentes, uma ou duas colunas conforme a tela, navegação pela âncora, fechamento do menu, foco por teclado e endereço do WhatsApp, sem rolagem horizontal ou erros de execução.
 
 ## Desenvolvimento local
 
@@ -107,6 +112,7 @@ README, documentação, mensagens de commit, títulos e descrições de pull req
 - `src/components/`: cabeçalho, seção inicial e ícones compartilhados.
 - `src/components/Clinica.tsx`: apresentação e mosaico de fotos da clínica.
 - `src/components/Tratamentos.tsx`: grade de tratamentos com links para o WhatsApp.
+- `src/components/Diferenciais.tsx`: apresentação dos diferenciais da clínica.
 - `src/dados/tratamentos.ts`: nomes, descrições e imagens dos tratamentos.
 - `src/config/contato.ts`: número e endereço de agendamento pelo WhatsApp.
 - `src/index.css`: paleta, estilos globais e elementos compartilhados.
