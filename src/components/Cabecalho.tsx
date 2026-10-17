@@ -41,7 +41,7 @@ export function Cabecalho() {
 
   return (
     <header className="cabecalho container" ref={cabecalho}>
-      <a className="marca" href="#inicio" aria-label="Essenza Odontologia — início" onClick={() => definirMenuAberto(false)}>
+      <a className="marca" href="#inicio" onClick={() => definirMenuAberto(false)}>
         <span className="marca-simbolo"><Icone nome="brilho" /></span>
         <span>essenza<small>ODONTOLOGIA</small></span>
       </a>

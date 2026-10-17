@@ -21,7 +21,7 @@ export function Rodape() {
       <div className="container">
         <div className="rodape-colunas">
           <div className="rodape-apresentacao">
-            <a className="marca" href="#inicio" aria-label="Essenza Odontologia — voltar ao início"><span className="marca-simbolo"><Icone nome="brilho" /></span><span>essenza<small>ODONTOLOGIA</small></span></a>
+            <a className="marca" href="#inicio"><span className="marca-simbolo"><Icone nome="brilho" /></span><span>essenza<small>ODONTOLOGIA</small></span></a>
             <p>Odontologia sensível, moderna e feita para você.</p>
           </div>
           <nav aria-label="Navegação do rodapé">
@@ -47,4 +47,5 @@ export function Rodape() {
     </footer>
   )
 }
+
 

@@ -18,7 +18,7 @@ export function Tratamentos() {
         <ul className="tratamentos-grade">
           {tratamentos.map((tratamento, indice) => (
             <li key={tratamento.nome}>
-              <a className="tratamento-cartao" href={whatsappDoTratamento(tratamento.nome)} target="_blank" rel="noopener noreferrer" aria-label={`Saiba mais sobre ${tratamento.nome} pelo WhatsApp (abre em outra aba)`}>
+              <a className="tratamento-cartao" href={whatsappDoTratamento(tratamento.nome)} target="_blank" rel="noopener noreferrer">
                 <div className="tratamento-foto">
                   <img src={`/imagens/${tratamento.imagem}`} alt="" width={tratamento.largura} height={tratamento.altura} style={{ objectPosition: tratamento.posicao }} loading="lazy" />
                   <span className="tratamento-numero" aria-hidden="true">{String(indice + 1).padStart(2, '0')}</span>
@@ -27,6 +27,7 @@ export function Tratamentos() {
                   <h3>{tratamento.nome}</h3>
                   <p>{tratamento.descricao}</p>
                   <span className="tratamento-seta"><Icone nome="seta" /></span>
+                  <span className="somente-leitor"> Saiba mais pelo WhatsApp (abre em outra aba).</span>
                 </div>
               </a>
             </li>
