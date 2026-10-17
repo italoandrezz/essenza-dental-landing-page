@@ -13,3 +13,18 @@
 .rodape-base a { padding-right: 64px; }
 .rodape-base svg { width: 16px; height: 16px; transform: rotate(-90deg); }
 .rodape :focus-visible { outline-color: var(--cor-branco); }
+
+@media (max-width: 1023px) {
+  .rodape-colunas { grid-template-columns: 1fr 1fr; gap: 36px 48px; }
+  .rodape nav a, .rodape-contato > a, .rodape-base a { min-height: 44px; }
+}
+@media (max-width: 599px) {
+  .rodape { padding-top: 48px; }
+  .rodape-colunas { grid-template-columns: 1fr 1fr; gap: 32px 20px; padding-bottom: 32px; }
+  .rodape-apresentacao, .rodape-contato { grid-column: 1 / -1; }
+  .rodape-apresentacao p { max-width: 280px; margin-top: 20px; font-size: 14px; }
+  .rodape .rodape-titulo { margin-top: 0; margin-bottom: 14px; }
+  .rodape nav a, .rodape-contato > a { font-size: 13px; }
+  .rodape-base { align-items: flex-start; flex-direction: column; gap: 12px; padding-bottom: 88px; }
+  .rodape-base a { padding-right: 0; }
+}
