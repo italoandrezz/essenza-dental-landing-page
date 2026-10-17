@@ -5,7 +5,7 @@
 .equipe-grade > li { min-width: 0; }
 .equipe-grade > li:nth-child(2) { margin-top: 44px; }
 .equipe-grade figure { margin: 0; }
-.equipe-retrato { position: relative; aspect-ratio: .88; background: var(--cor-verde-gelo); border-radius: 180px 180px 24px 24px; }
+.equipe-retrato { position: relative; aspect-ratio: .88; overflow: hidden; background: var(--cor-verde-gelo); border-radius: 180px 180px 24px 24px; }
 .equipe-retrato img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
 .equipe-grade figcaption { margin-top: 24px; text-align: center; }
 .equipe-grade h3 { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -.3px; }

@@ -24,6 +24,10 @@ body { margin: 0; min-width: 320px; }
 button, input, textarea { font: inherit; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  img { transition: transform 350ms ease, filter 350ms ease; }
+  img:hover { transform: scale(1.045); filter: saturate(1.06); }
+}
 h1, h2, p { margin: 0; }
 ::selection { background: var(--cor-verde-escuro); color: var(--cor-branco); }
 :focus-visible { outline: 3px solid var(--cor-verde-escuro); outline-offset: 5px; }
