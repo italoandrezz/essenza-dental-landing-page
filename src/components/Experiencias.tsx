@@ -23,31 +23,32 @@ export function Experiencias() {
   return (
     <section className="experiencias" id="experiencias" aria-labelledby="titulo-experiencias">
       <div className="container experiencias-conteudo">
-        <p className="sobretitulo">O cuidado em cada encontro</p>
+        <p className="sobretitulo">Experiências que inspiram</p>
         <h2 id="titulo-experiencias">Cuidado que deixa marcas<br className="experiencias-quebra" /> bonitas</h2>
-        <div className="experiencias-carrossel" role="group" aria-roledescription="carrossel" aria-label="Compromissos da Essenza" onKeyDown={navegarComTeclado}>
-          <span className="experiencias-ornamento"><Icone nome="brilho" /><Icone nome="brilho" /><Icone nome="brilho" /></span>
+        <div className="experiencias-carrossel" role="group" aria-roledescription="carrossel" aria-label="Depoimentos demonstrativos" onKeyDown={navegarComTeclado}>
+          <span className="experiencias-ornamento" aria-label="Avaliação demonstrativa de cinco estrelas">★★★★★</span>
           <div className="experiencias-relato" aria-live="polite" aria-atomic="true">
             <figure>
-              <blockquote><p>{experiencia.texto}</p></blockquote>
+              <blockquote><p>“{experiencia.texto}”</p></blockquote>
               <figcaption>
-                <span className="experiencias-marca"><Icone nome="brilho" /></span>
+                <span className="experiencias-marca" aria-hidden="true">{experiencia.assinatura.split(' ').map(nome => nome[0]).join('')}</span>
                 <span><strong>{experiencia.assinatura}</strong><span className="experiencias-contexto">{experiencia.contexto}</span></span>
               </figcaption>
             </figure>
-            <span className="somente-leitor">Mensagem {indice + 1} de {experiencias.length}.</span>
+            <span className="somente-leitor">Depoimento {indice + 1} de {experiencias.length}.</span>
           </div>
           <div className="experiencias-controles">
-            <button className="experiencias-anterior" type="button" onClick={() => avancar(-1)} aria-label="Mensagem anterior"><Icone nome="seta" /></button>
-            <div className="experiencias-indicadores" role="group" aria-label="Selecionar mensagem">
+            <button className="experiencias-anterior" type="button" onClick={() => avancar(-1)} aria-label="Depoimento anterior"><Icone nome="seta" /></button>
+            <div className="experiencias-indicadores" role="group" aria-label="Selecionar depoimento">
               {experiencias.map((item, posicao) => (
-                <button key={item.id} type="button" aria-label={`Exibir mensagem ${posicao + 1}: ${item.contexto}`} aria-pressed={posicao === indice} onClick={() => definirIndice(posicao)}><span /></button>
+                <button key={item.id} type="button" aria-label={`Exibir depoimento ${posicao + 1}: ${item.assinatura}`} aria-pressed={posicao === indice} onClick={() => definirIndice(posicao)}><span /></button>
               ))}
             </div>
-            <button type="button" onClick={() => avancar(1)} aria-label="Próxima mensagem"><Icone nome="seta" /></button>
+            <button type="button" onClick={() => avancar(1)} aria-label="Próximo depoimento"><Icone nome="seta" /></button>
           </div>
         </div>
       </div>
     </section>
   )
 }
+

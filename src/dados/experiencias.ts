@@ -1,20 +1,21 @@
-﻿export const experiencias = [
+﻿// Conteúdo fictício para apresentação do layout. Substituir antes da publicação definitiva.
+export const experiencias = [
   {
-    id: 'escuta',
-    texto: 'Antes de cuidar do seu sorriso, queremos conhecer você. Escutar sua história e respeitar seu tempo faz parte do nosso cuidado.',
-    assinatura: 'Essenza Odontologia',
-    contexto: 'Nosso compromisso com a escuta',
+    id: 'mariana',
+    texto: 'Desde a recepção até o fim da consulta, me senti genuinamente cuidada. Tudo é explicado com calma e o ambiente transmite muita tranquilidade.',
+    assinatura: 'Mariana Alves',
+    contexto: 'Depoimento fictício para apresentação',
   },
   {
-    id: 'clareza',
-    texto: 'Um atendimento tranquilo começa com uma conversa clara. Queremos que você compreenda cada etapa e se sinta à vontade para perguntar.',
-    assinatura: 'Essenza Odontologia',
-    contexto: 'Nosso compromisso com a transparência',
+    id: 'rafael',
+    texto: 'Eu tinha receio de ir ao dentista, mas a conversa e a atenção da equipe fizeram toda a diferença. Consegui tirar minhas dúvidas e me sentir mais tranquilo.',
+    assinatura: 'Rafael Costa',
+    contexto: 'Depoimento fictício para apresentação',
   },
   {
-    id: 'acolhimento',
-    texto: 'A atenção está nos pequenos detalhes: na forma de receber, na delicadeza de cada conversa e no respeito a quem você é.',
-    assinatura: 'Essenza Odontologia',
-    contexto: 'Nosso compromisso com o acolhimento',
+    id: 'juliana',
+    texto: 'Gostei de entender cada etapa antes de começar. O atendimento foi acolhedor, sem pressa, e senti que o cuidado foi pensado para mim.',
+    assinatura: 'Juliana Lima',
+    contexto: 'Depoimento fictício para apresentação',
   },
 ]
