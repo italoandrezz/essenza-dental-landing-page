@@ -1,5 +1,5 @@
-﻿import { contato, whatsappDoTratamento } from '../config/contato'
-import { tratamentos } from '../dados/tratamentos'
+﻿import { contato } from '../config/contato'
+import { informacoesClinica } from '../dados/informacoesClinica'
 import { Icone } from './Icone'
 import './Rodape.css'
 
@@ -9,13 +9,12 @@ const secoes = [
   { nome: 'A clínica', destino: '#clinica' },
   { nome: 'Tratamentos', destino: '#tratamentos' },
   { nome: 'Equipe', destino: '#equipe' },
-  { nome: 'Diferenciais', destino: '#diferenciais' },
-  { nome: 'Experiências', destino: '#experiencias' },
   { nome: 'Dúvidas', destino: '#perguntas-frequentes' },
-  { nome: 'Contato', destino: '#contato' },
 ]
 
 export function Rodape() {
+  const instagram = <><Icone nome="instagram" /><span>Instagram</span></>
+
   return (
     <footer className="rodape">
       <div className="container">
@@ -28,24 +27,24 @@ export function Rodape() {
             <h2 className="rodape-titulo">Navegue</h2>
             <ul>{secoes.map(secao => <li key={secao.destino}><a href={secao.destino}>{secao.nome}</a></li>)}</ul>
           </nav>
-          <nav aria-label="Tratamentos no rodapé">
-            <h2 className="rodape-titulo">Tratamentos</h2>
-            <ul>{tratamentos.map(tratamento => <li key={tratamento.nome}><a href={whatsappDoTratamento(tratamento.nome)} target="_blank" rel="noopener noreferrer">{tratamento.nome}<span className="somente-leitor"> pelo WhatsApp (abre em outra aba)</span></a></li>)}</ul>
-          </nav>
           <div className="rodape-contato">
-            <h2 className="rodape-titulo">Fale conosco</h2>
+            <h2 className="rodape-titulo">Contato</h2>
             <a href={`tel:${contato.telefone.replace(/[^+\d]/g, '')}`}>{contato.telefone}</a>
-            <a href={contato.whatsapp} target="_blank" rel="noopener noreferrer"><Icone nome="whatsapp" />Conversar pelo WhatsApp<span className="somente-leitor"> (abre em outra aba)</span></a>
-            <p>Será um prazer receber você.</p>
+            <a href={`mailto:${contato.email}`}>{contato.email}</a>
+            <p>{informacoesClinica.endereco[1]}</p>
+          </div>
+          <div className="rodape-acompanhe">
+            <h2 className="rodape-titulo">Acompanhe</h2>
+            {contato.instagram
+              ? <a className="rodape-instagram" href={contato.instagram} target="_blank" rel="noopener noreferrer">{instagram}<span className="somente-leitor"> (abre em outra aba)</span></a>
+              : <span className="rodape-instagram">{instagram}</span>}
           </div>
         </div>
         <div className="rodape-base">
-          <p>© {anoAtual} Essenza Odontologia. Todos os direitos reservados.</p>
-          <a href="#inicio">Voltar ao início <Icone nome="seta" /></a>
+          <p>© {anoAtual} Essenza Odontologia. Projeto demonstrativo.</p>
+          <p>Feito com cuidado, do início ao sorriso.</p>
         </div>
       </div>
     </footer>
   )
 }
-
-

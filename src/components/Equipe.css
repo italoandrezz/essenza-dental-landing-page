@@ -5,10 +5,9 @@
 .equipe-grade > li { min-width: 0; }
 .equipe-grade > li:nth-child(2) { margin-top: 44px; }
 .equipe-grade figure { margin: 0; }
-.equipe-retrato { position: relative; aspect-ratio: .88; background: var(--cor-verde-gelo); border-radius: 180px 180px 24px 24px; }
+.equipe-retrato { position: relative; aspect-ratio: .88; overflow: hidden; background: var(--cor-verde-gelo); border-radius: 180px 180px 24px 24px; }
 .equipe-retrato img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
-.equipe-numero { position: absolute; left: 50%; bottom: -18px; display: grid; place-items: center; width: 38px; height: 38px; border: 4px solid var(--cor-branco); border-radius: 50%; background: var(--cor-verde-escuro); color: var(--cor-branco); font-size: 10px; font-weight: 600; transform: translateX(-50%); }
-.equipe-grade figcaption { margin-top: 36px; text-align: center; }
+.equipe-grade figcaption { margin-top: 24px; text-align: center; }
 .equipe-grade h3 { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -.3px; }
 .equipe-grade figcaption p { margin-top: 8px; color: #4c6862; font-size: 12px; line-height: 1.7; }
 .equipe-observacao { margin-top: 48px; color: #4c6862; font-size: 11px; line-height: 1.8; text-align: center; }

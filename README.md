@@ -2,7 +2,7 @@
 
 Landing page de uma clínica odontológica, com apresentação da clínica, tratamentos, equipe e agendamento pelo WhatsApp.
 
-Versão 1.0.0, com layout responsivo para celular, tablet e desktop. Os dados da clínica, os perfis e os depoimentos são fictícios nesta versão de apresentação.
+Versão 1.0.1, com layout responsivo para celular, tablet e desktop. Os dados da clínica, os perfis e os depoimentos são fictícios nesta versão de apresentação.
 
 ## Tecnologias
 
@@ -56,7 +56,7 @@ public/
 
 | Conteúdo | Arquivo |
 | --- | --- |
-| Telefone e WhatsApp | `src/config/contato.ts` |
+| Telefone, e-mail, WhatsApp e Instagram | `src/config/contato.ts` |
 | Endereço e horários | `src/dados/informacoesClinica.ts` |
 | Tratamentos | `src/dados/tratamentos.ts` |
 | Equipe | `src/dados/equipe.ts` |
@@ -65,6 +65,8 @@ public/
 | Cores e estilos globais | `src/index.css` |
 
 As fotos são ilustrativas, do Unsplash. Nomes, especialidades, depoimentos, endereço, horários e indicadores são demonstrativos. Para uso por uma clínica real, substitua esses dados e confirme a identidade visual.
+
+O e-mail do rodapé segue a referência visual. O Instagram aponta para o perfil oficial `@instagram`, pois a clínica é fictícia; o endereço pode ser alterado em `src/config/contato.ts`.
 
 ## Paleta de cores
 
@@ -95,6 +97,6 @@ Para publicar uma versão: PR de `develop` para `main` após validação, seguid
 
 ## Versão
 
-[Release v1.0.0](https://github.com/italoandrezz/essenza-dental-landing-page/releases/tag/v1.0.0). Alterações em [CHANGELOG.md](CHANGELOG.md).
+[Release v1.0.1](https://github.com/italoandrezz/essenza-dental-landing-page/releases/tag/v1.0.1). Alterações em [CHANGELOG.md](CHANGELOG.md).
 
 A compilação gera arquivos estáticos em `dist/`, prontos para hospedagem.

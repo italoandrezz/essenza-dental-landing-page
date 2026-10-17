@@ -12,8 +12,16 @@
 .perguntas-numero { padding-top: 4px; font-size: 10px; font-weight: 400; letter-spacing: 1px; }
 .perguntas-seta { margin-top: 3px; flex-shrink: 0; transition: transform 180ms ease; }
 .perguntas-item button[aria-expanded='true'] .perguntas-seta { transform: rotate(180deg); }
+.perguntas-painel { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows 280ms ease, opacity 200ms ease, visibility 0s linear 280ms; }
+.perguntas-painel-aberto { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition-delay: 0s; }
+.perguntas-recorte { min-height: 0; overflow: hidden; }
 .perguntas-resposta { padding: 0 44px 28px 46px; }
 .perguntas-resposta p { color: #4c6862; font-size: 13px; line-height: 1.9; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .perguntas-item button > span:not(.perguntas-numero) { transition: transform 220ms ease; }
+  .perguntas-item button:hover > span:not(.perguntas-numero) { transform: translateX(4px); }
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .perguntas { padding-block: 80px; }

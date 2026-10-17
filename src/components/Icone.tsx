@@ -1,6 +1,6 @@
 ﻿import type { SVGProps } from 'react'
 
-type NomeIcone = 'seta' | 'whatsapp' | 'coracao' | 'escudo' | 'brilho' | 'menu' | 'fechar' | 'tecnologia' | 'localizacao' | 'relogio' | 'calendario'
+type NomeIcone = 'seta' | 'whatsapp' | 'coracao' | 'escudo' | 'brilho' | 'menu' | 'fechar' | 'tecnologia' | 'localizacao' | 'relogio' | 'calendario' | 'instagram'
 
 const desenhos: Record<NomeIcone, React.ReactNode> = {
   seta: <><path d="M4 12h16M14 6l6 6-6 6" /></>,
@@ -14,6 +14,7 @@ const desenhos: Record<NomeIcone, React.ReactNode> = {
   relogio: <><circle cx="12" cy="12" r="9" /><path d="M12 6v6l4 2" /></>,
   calendario: <><rect x="4" y="5" width="16" height="16" rx="2" /><path d="M8 3v4M16 3v4M4 11h16" /></>,
   fechar: <path d="m6 6 12 12M6 18 18 6" />,
+  instagram: <><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" /></>,
 }
 
 export function Icone({ nome, ...props }: SVGProps<SVGSVGElement> & { nome: NomeIcone }) {

@@ -6,8 +6,14 @@ import { Icone } from './Icone'
 import './PerguntasFrequentes.css'
 
 export function PerguntasFrequentes() {
-  const [perguntaAberta, definirPerguntaAberta] = useState<string | null>(perguntasFrequentes[0].id)
+  const [perguntasAbertas, definirPerguntasAbertas] = useState<string[]>([perguntasFrequentes[0].id])
   const botoes = useRef<Array<HTMLButtonElement | null>>([])
+
+  function alternarPergunta(id: string) {
+    definirPerguntasAbertas(atuais => atuais.includes(id)
+      ? atuais.filter(pergunta => pergunta !== id)
+      : [...atuais, id])
+  }
 
   function navegarPerguntas(evento: KeyboardEvent<HTMLButtonElement>, indice: number) {
     if (evento.altKey || evento.ctrlKey || evento.metaKey || evento.shiftKey) return
@@ -34,19 +40,23 @@ export function PerguntasFrequentes() {
         </div>
         <div className="perguntas-lista">
           {perguntasFrequentes.map((item, indice) => {
-            const aberta = perguntaAberta === item.id
+            const aberta = perguntasAbertas.includes(item.id)
             const idBotao = `pergunta-${item.id}`
             const idResposta = `resposta-${item.id}`
             return (
               <div className="perguntas-item" key={item.id}>
                 <h3>
-                  <button type="button" id={idBotao} aria-expanded={aberta} aria-controls={idResposta} ref={elemento => { botoes.current[indice] = elemento }} onClick={() => definirPerguntaAberta(aberta ? null : item.id)} onKeyDown={evento => navegarPerguntas(evento, indice)}>
+                  <button type="button" id={idBotao} aria-expanded={aberta} aria-controls={idResposta} ref={elemento => { botoes.current[indice] = elemento }} onClick={() => alternarPergunta(item.id)} onKeyDown={evento => navegarPerguntas(evento, indice)}>
                     <span className="perguntas-numero" aria-hidden="true">{String(indice + 1).padStart(2, '0')}</span>
                     <span>{item.pergunta}</span>
                     <svg className="perguntas-seta" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
                   </button>
                 </h3>
-                <div className="perguntas-resposta" id={idResposta} role="region" aria-labelledby={idBotao} hidden={!aberta}><p>{item.resposta}</p></div>
+                <div className={`perguntas-painel${aberta ? ' perguntas-painel-aberto' : ''}`} id={idResposta} role="region" aria-labelledby={idBotao} aria-hidden={!aberta} inert={!aberta}>
+                  <div className="perguntas-recorte">
+                    <div className="perguntas-resposta"><p>{item.resposta}</p></div>
+                  </div>
+                </div>
               </div>
             )
           })}

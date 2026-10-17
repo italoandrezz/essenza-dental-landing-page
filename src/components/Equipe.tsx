@@ -12,12 +12,11 @@ export function Equipe() {
           <p className="descricao">Uma equipe multidisciplinar unida pelo mesmo propósito: oferecer uma odontologia mais humana e consciente.</p>
         </div>
         <ul className="equipe-grade" aria-label="Apresentação da equipe" aria-describedby="equipe-observacao">
-          {equipe.map((profissional, indice) => (
+          {equipe.map(profissional => (
             <li key={profissional.id}>
               <figure>
                 <div className="equipe-retrato">
                   <Imagem sizes="(max-width: 599px) min(400px, calc(100vw - 32px)), (max-width: 1023px) calc((100vw - 72px) / 2), 360px" src={`/imagens/${profissional.imagem}`} alt={`Foto ilustrativa para o perfil fictício de ${profissional.nome}.`} width={profissional.largura} height={profissional.altura} style={{ objectPosition: profissional.posicao }} loading="lazy" />
-                  <span className="equipe-numero" aria-hidden="true">{String(indice + 1).padStart(2, '0')}</span>
                 </div>
                 <figcaption><h3>{profissional.nome}</h3><p>{profissional.especialidade}</p></figcaption>
               </figure>
