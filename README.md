@@ -56,7 +56,7 @@ public/
 
 | Conteúdo | Arquivo |
 | --- | --- |
-| Telefone e WhatsApp | `src/config/contato.ts` |
+| Telefone, e-mail, WhatsApp e Instagram | `src/config/contato.ts` |
 | Endereço e horários | `src/dados/informacoesClinica.ts` |
 | Tratamentos | `src/dados/tratamentos.ts` |
 | Equipe | `src/dados/equipe.ts` |
@@ -65,6 +65,8 @@ public/
 | Cores e estilos globais | `src/index.css` |
 
 As fotos são ilustrativas, do Unsplash. Nomes, especialidades, depoimentos, endereço, horários e indicadores são demonstrativos. Para uso por uma clínica real, substitua esses dados e confirme a identidade visual.
+
+O e-mail do rodapé segue a referência visual. Preencha `instagram` com a URL do perfil para ativar o link; enquanto estiver vazio, apenas o nome e o ícone são exibidos.
 
 ## Paleta de cores
 
