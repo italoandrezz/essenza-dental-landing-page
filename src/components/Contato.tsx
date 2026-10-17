@@ -26,7 +26,6 @@ export function Contato() {
             <span className="contato-icone"><Icone nome="calendario" /></span>
             <div><h3>Atendimento</h3><p>{informacoesClinica.atendimento}</p><a href={`tel:${contato.telefone.replace(/[^+\d]/g, '')}`}>{contato.telefone}</a></div>
           </div>
-          <p className="contato-observacao">Endereço e horários demonstrativos.</p>
         </div>
       </div>
     </section>
