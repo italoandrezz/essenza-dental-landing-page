@@ -1,5 +1,14 @@
 # Histórico de versões
 
+## 1.0.1 — 17/10/2026
+
+- Remove o aviso de endereço e horários do contato e a numeração dos diferenciais e da equipe.
+- Adiciona efeitos ao passar o mouse sobre os ícones, as linhas dos diferenciais e todas as fotos.
+- Permite manter várias respostas das perguntas frequentes abertas, com expansão e recolhimento suaves.
+- Preserva navegação por teclado, suporte a movimento reduzido e layouts responsivos.
+- Corrige a composição do rodapé conforme a referência, com as colunas Navegue, Contato e Acompanhe.
+- Direciona o Instagram para o perfil oficial `@instagram`.
+
 ## 1.0.0 — 17/10/2026
 
 - Landing page com apresentação da clínica, tratamentos, equipe, diferenciais, depoimentos, perguntas frequentes, contato e rodapé.

@@ -2,7 +2,7 @@
 
 Landing page de uma clínica odontológica, com apresentação da clínica, tratamentos, equipe e agendamento pelo WhatsApp.
 
-Versão 1.0.0, com layout responsivo para celular, tablet e desktop. Os dados da clínica, os perfis e os depoimentos são fictícios nesta versão de apresentação.
+Versão 1.0.1, com layout responsivo para celular, tablet e desktop. Os dados da clínica, os perfis e os depoimentos são fictícios nesta versão de apresentação.
 
 ## Tecnologias
 
@@ -97,6 +97,6 @@ Para publicar uma versão: PR de `develop` para `main` após validação, seguid
 
 ## Versão
 
-[Release v1.0.0](https://github.com/italoandrezz/essenza-dental-landing-page/releases/tag/v1.0.0). Alterações em [CHANGELOG.md](CHANGELOG.md).
+[Release v1.0.1](https://github.com/italoandrezz/essenza-dental-landing-page/releases/tag/v1.0.1). Alterações em [CHANGELOG.md](CHANGELOG.md).
 
 A compilação gera arquivos estáticos em `dist/`, prontos para hospedagem.
