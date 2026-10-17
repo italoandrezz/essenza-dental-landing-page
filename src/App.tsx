@@ -5,6 +5,7 @@ import { Clinica } from './components/Clinica'
 import { Tratamentos } from './components/Tratamentos'
 import { Diferenciais } from './components/Diferenciais'
 import { Experiencias } from './components/Experiencias'
+import { PerguntasFrequentes } from './components/PerguntasFrequentes'
 import { contato } from './config/contato'
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
         <Tratamentos />
         <Diferenciais />
         <Experiencias />
+        <PerguntasFrequentes />
       </main>
       <a className="whatsapp-flutuante" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Essenza pelo WhatsApp (abre em outra aba)"><Icone nome="whatsapp" /></a>
     </div>
@@ -26,6 +28,7 @@ function App() {
 }
 
 export default App
+
 
 
 
