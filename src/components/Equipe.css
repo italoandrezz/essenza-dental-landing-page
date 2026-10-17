@@ -12,3 +12,21 @@
 .equipe-grade h3 { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -.3px; }
 .equipe-grade figcaption p { margin-top: 8px; color: #4c6862; font-size: 12px; line-height: 1.7; }
 .equipe-observacao { margin-top: 48px; color: #4c6862; font-size: 11px; line-height: 1.8; text-align: center; }
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .equipe { padding-block: 80px; }
+  .equipe-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; margin-top: 48px; }
+  .equipe-grade > li:nth-child(2) { margin-top: 0; }
+  .equipe-grade > li:last-child { grid-column: 1 / -1; width: calc((100% - 24px) / 2); justify-self: center; }
+}
+@media (max-width: 599px) {
+  .equipe { padding-block: 56px; }
+  .equipe-quebra { display: none; }
+  .equipe-introducao .descricao { margin-top: 22px; }
+  .equipe-grade { grid-template-columns: 1fr; max-width: 400px; gap: 40px; margin: 40px auto 0; }
+  .equipe-grade > li:nth-child(2) { margin-top: 0; }
+  .equipe-retrato { aspect-ratio: .98; }
+  .equipe-grade h3 { font-size: 20px; }
+  .equipe-grade figcaption p { font-size: 14px; }
+  .equipe-observacao { margin-top: 36px; }
+}
