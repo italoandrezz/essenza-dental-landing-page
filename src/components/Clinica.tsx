@@ -1,4 +1,5 @@
-﻿import './Clinica.css'
+﻿import { Imagem } from './Imagem'
+import './Clinica.css'
 
 export function Clinica() {
   return (
@@ -13,7 +14,7 @@ export function Clinica() {
         </div>
         <div className="clinica-mosaico">
           <figure className="clinica-ambiente">
-            <img src="/imagens/ambiente-provisorio.jpg" alt="Ambiente odontológico claro e acolhedor." width="1000" height="668" loading="lazy" />
+            <Imagem sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 72px) / 2), 460px" src="/imagens/ambiente-provisorio.webp" alt="Ambiente odontológico claro e acolhedor." width={1000} height={668} loading="lazy" />
             <figcaption>Ambientes que convidam à calma</figcaption>
           </figure>
           <article className="clinica-filosofia">
@@ -27,14 +28,15 @@ export function Clinica() {
             </ul>
           </article>
           <figure className="clinica-consultorio">
-            <img src="/imagens/clinica-provisoria.jpg" alt="Consultório com cadeira odontológica e equipamentos." width="1100" height="735" loading="lazy" />
+            <Imagem sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 72px) / 2), 460px" src="/imagens/clinica-provisoria.webp" alt="Consultório com cadeira odontológica e equipamentos." width={1100} height={735} loading="lazy" />
           </figure>
           <figure className="clinica-detalhe">
-            <img src="/imagens/ambiente-provisorio.jpg" alt="Detalhes dos equipamentos e da cadeira do consultório." width="1000" height="668" loading="lazy" />
+            <Imagem sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 72px) / 2), 460px" src="/imagens/ambiente-provisorio.webp" alt="Detalhes dos equipamentos e da cadeira do consultório." width={1000} height={668} loading="lazy" />
           </figure>
         </div>
       </div>
     </section>
   )
 }
+
 

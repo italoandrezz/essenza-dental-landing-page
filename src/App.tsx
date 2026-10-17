@@ -28,7 +28,9 @@ function App() {
         <Contato />
       </main>
       <Rodape />
-      <a className="whatsapp-flutuante" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Essenza pelo WhatsApp (abre em outra aba)"><Icone nome="whatsapp" /></a>
+      <aside aria-label="Contato rápido">
+        <a className="whatsapp-flutuante" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Essenza pelo WhatsApp (abre em outra aba)"><Icone nome="whatsapp" /></a>
+      </aside>
     </div>
   )
 }

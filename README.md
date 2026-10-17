@@ -2,7 +2,7 @@
 
 Landing page de uma clínica odontológica, com apresentação da clínica, tratamentos, equipe e agendamento pelo WhatsApp.
 
-Projeto em desenvolvimento, com layout responsivo para celular, tablet e desktop. Os dados da clínica, os perfis e os depoimentos são fictícios nesta versão.
+Versão 1.0.0, com layout responsivo para celular, tablet e desktop. Os dados da clínica, os perfis e os depoimentos são fictícios nesta versão de apresentação.
 
 ## Tecnologias
 
@@ -35,6 +35,7 @@ Acesse o endereço exibido no terminal.
 - Carrossel de depoimentos e perguntas frequentes expansíveis.
 - Agendamento pelo WhatsApp e telefone clicável.
 - Navegação por teclado e suporte à preferência por movimento reduzido.
+- Fotos em WebP com tamanhos responsivos e carregamento prioritário da imagem inicial.
 
 ## Estrutura
 
@@ -63,7 +64,7 @@ public/
 | Perguntas frequentes | `src/dados/perguntasFrequentes.ts` |
 | Cores e estilos globais | `src/index.css` |
 
-As fotos são provisórias, do Unsplash. Nomes, especialidades, depoimentos, endereço, horários e indicadores precisam ser revisados antes da publicação. A tipografia e o símbolo da marca também são provisórios.
+As fotos são ilustrativas, do Unsplash. Nomes, especialidades, depoimentos, endereço, horários e indicadores são demonstrativos. Para uso por uma clínica real, substitua esses dados e confirme a identidade visual.
 
 ## Paleta de cores
 
@@ -78,7 +79,7 @@ As fotos são provisórias, do Unsplash. Nomes, especialidades, depoimentos, end
 ## Fluxo de desenvolvimento
 
 - `develop`: integração das funcionalidades durante o desenvolvimento.
-- `main`: versão principal, reservada à release final.
+- `main`: versões estáveis publicadas por release.
 - Cada tarefa parte de uma branch criada a partir de `develop`, com PR de volta para `develop`.
 - Commits separados por alteração, com mensagens, títulos e descrições de PR em português.
 - Antes do PR: `npm run lint` e `npm run build`.
@@ -90,4 +91,10 @@ git pull --ff-only origin develop
 git switch -c feat/nome-da-tarefa
 ```
 
-Ao finalizar o projeto: PR de `develop` para `main`, tag `v1.0.0` e release com notas em português.
+Para publicar uma versão: PR de `develop` para `main` após validação, seguido de tag e release com notas em português.
+
+## Versão
+
+[Release v1.0.0](https://github.com/italoandrezz/essenza-dental-landing-page/releases/tag/v1.0.0). Alterações em [CHANGELOG.md](CHANGELOG.md).
+
+A compilação gera arquivos estáticos em `dist/`, prontos para hospedagem.

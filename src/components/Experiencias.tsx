@@ -26,7 +26,7 @@ export function Experiencias() {
         <p className="sobretitulo">Experiências que inspiram</p>
         <h2 id="titulo-experiencias">Cuidado que deixa marcas<br className="experiencias-quebra" /> bonitas</h2>
         <div className="experiencias-carrossel" role="group" aria-roledescription="carrossel" aria-label="Depoimentos demonstrativos" onKeyDown={navegarComTeclado}>
-          <span className="experiencias-ornamento" aria-label="Avaliação demonstrativa de cinco estrelas">★★★★★</span>
+          <span className="experiencias-ornamento" role="img" aria-label="Avaliação demonstrativa de cinco estrelas">★★★★★</span>
           <div className="experiencias-relato" aria-live="polite" aria-atomic="true">
             <figure>
               <blockquote><p>“{experiencia.texto}”</p></blockquote>
