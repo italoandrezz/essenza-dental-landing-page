@@ -50,6 +50,8 @@ O carrossel de experiências foi validado nas mesmas larguras e em paisagem (844
 
 O acordeão de perguntas frequentes também foi validado nessas sete larguras e em paisagem: estado inicial, abertura única, recolhimento de todas as respostas, Enter, Espaço, setas, Home, End, associação entre controles e respostas, link de contato e acesso pelo menu. Não houve rolagem horizontal nem erros de execução.
 
+Os links de seção apontam para o início do conteúdo, evitando somar o espaçamento interno ao espaço reservado ao cabeçalho. A distância de chegada é responsiva, e a última seção tem altura mínima de uma tela para permitir o alinhamento mesmo com pouco conteúdo. A navegação pelas seis âncoras e o acesso direto por URL foram verificados de 320 a 1920 px, incluindo rolagem suave e preferência por movimento reduzido.
+
 ## Desenvolvimento local
 
 Requisito: Node.js 24 e npm.
