@@ -14,7 +14,9 @@ A seção “O extraordinário mora nos detalhes” apresenta os quatro diferenc
 
 A seção “Cuidado que deixa marcas bonitas” apresenta um carrossel manual com três depoimentos fictícios, conforme solicitado para esta fase. Inclui botões anterior/próximo, seleção direta, navegação por setas do teclado e anúncio das alterações para leitores de tela, sem avanço automático. O link “Experiências” leva à seção.
 
-As próximas etapas incluem as fotos e identidade definitivas, perguntas frequentes, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
+A seção “Informação também é uma forma de cuidado” reúne seis perguntas frequentes em um acordeão: a primeira resposta começa aberta, somente uma pode ficar aberta por vez e todas podem ser recolhidas. O link “Dúvidas” no menu leva à seção, e o contato complementar abre o WhatsApp.
+
+As próximas etapas incluem as fotos e identidade definitivas, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
 
 ## Contato e conteúdo provisório
 
@@ -22,6 +24,7 @@ As próximas etapas incluem as fotos e identidade definitivas, perguntas frequen
 - A foto é ilustrativa e não representa as instalações da Essenza. Foi obtida por meio desta [imagem do Unsplash](https://images.unsplash.com/photo-1629909613654-28e377c37b09) e está armazenada localmente em `public/imagens/clinica-provisoria.jpg`. Substitua-a pela fotografia oficial antes da publicação definitiva.
 - Os indicadores `12+`, `3 mil` e `4,9` reproduzem o vídeo de referência. Confirme os dados antes da publicação definitiva.
 - Os nomes e relatos em `src/dados/experiencias.ts` são fictícios, identificados na interface como conteúdo de apresentação. Substitua-os por depoimentos reais e autorizados antes da publicação definitiva. As estrelas também são demonstrativas.
+- As perguntas e respostas ficam em `src/dados/perguntasFrequentes.ts`. O conteúdo é provisório e deve ser confirmado pela clínica antes da publicação, especialmente informações sobre convênios, pagamentos e disponibilidade de atendimento. Nenhuma lista de convênios ou condição de pagamento foi presumida.
 - As imagens adicionais também são provisórias: [ambiente odontológico](https://images.unsplash.com/photo-1629909615184-74f495363b67), [atendimento](https://images.unsplash.com/photo-1606811841689-23dfddce3e95) e [prevenção](https://images.unsplash.com/photo-1606811971618-4486d14f3f99). Estão armazenadas em `public/imagens/` e não representam a equipe ou os espaços reais da Essenza.
 
 ## Responsividade
@@ -33,6 +36,7 @@ As próximas etapas incluem as fotos e identidade definitivas, perguntas frequen
 - A grade de tratamentos usa uma coluna abaixo de 600 px, duas entre 600 e 1023 px e três a partir de 1024 px.
 - Os diferenciais usam introdução e lista lado a lado a partir de 768 px; no celular, o conteúdo fica em uma coluna e o botão ocupa a largura disponível nas telas menores.
 - O carrossel de experiências adapta os textos e espaçamentos ao celular e ao tablet, com botões de pelo menos 44 px. O menu permite rolagem em telas baixas, inclusive em paisagem.
+- As perguntas frequentes apresentam introdução e respostas lado a lado a partir de 768 px e uma coluna no celular. Os botões aceitam Enter e Espaço; as setas para cima/baixo, Home e End movem o foco entre as perguntas, mantendo Tab disponível para a navegação normal.
 
 Valide também o fechamento do menu por teclado, as âncoras, o carregamento da foto e a ausência de rolagem horizontal. Os links externos informam a abertura de outra aba às tecnologias assistivas.
 
@@ -43,6 +47,8 @@ As novas seções foram verificadas nas mesmas sete larguras: carregamento das f
 A seção de diferenciais também foi validada nessas sete larguras: quatro itens presentes, uma ou duas colunas conforme a tela, navegação pela âncora, fechamento do menu, foco por teclado e endereço do WhatsApp, sem rolagem horizontal ou erros de execução.
 
 O carrossel de experiências foi validado nas mesmas larguras e em paisagem (844 × 390 px): botões, ciclo entre os três relatos, seleção direta, setas do teclado, foco, estado do indicador, conteúdo demonstrativo, âncora e fechamento do menu. Não houve rolagem horizontal nem erros de execução.
+
+O acordeão de perguntas frequentes também foi validado nessas sete larguras e em paisagem: estado inicial, abertura única, recolhimento de todas as respostas, Enter, Espaço, setas, Home, End, associação entre controles e respostas, link de contato e acesso pelo menu. Não houve rolagem horizontal nem erros de execução.
 
 ## Desenvolvimento local
 
@@ -121,6 +127,8 @@ README, documentação, mensagens de commit, títulos e descrições de pull req
 - `src/components/Tratamentos.tsx`: grade de tratamentos com links para o WhatsApp.
 - `src/components/Diferenciais.tsx`: apresentação dos diferenciais da clínica.
 - `src/components/Experiencias.tsx`: carrossel acessível da seção de experiências.
+- `src/components/PerguntasFrequentes.tsx`: acordeão acessível das perguntas frequentes.
+- `src/dados/perguntasFrequentes.ts`: perguntas e respostas editáveis.
 - `src/dados/experiencias.ts`: depoimentos fictícios para apresentação do layout.
 - `src/dados/tratamentos.ts`: nomes, descrições e imagens dos tratamentos.
 - `src/config/contato.ts`: número e endereço de agendamento pelo WhatsApp.
