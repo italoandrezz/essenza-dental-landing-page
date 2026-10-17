@@ -12,3 +12,28 @@
 .diferenciais-numero { padding-top: 6px; font-size: 10px; letter-spacing: 1px; }
 .diferenciais-lista h3 { margin: 2px 0 10px; font-size: 19px; font-weight: 500; line-height: 1.35; letter-spacing: -.4px; }
 .diferenciais-lista p { color: #4c6862; font-size: 13px; line-height: 1.85; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .diferenciais { padding-block: 80px; }
+  .diferenciais-conteudo { grid-template-columns: .9fr 1.1fr; gap: 36px; }
+  .diferenciais-lista li { grid-template-columns: 36px 18px minmax(0, 1fr); gap: 12px; padding-block: 24px; }
+  .diferenciais-icone { width: 36px; height: 36px; border-radius: 12px; }
+  .diferenciais-lista h3 { font-size: 17px; }
+}
+@media (max-width: 767px) {
+  .diferenciais { padding-block: 56px 88px; }
+  .diferenciais-conteudo { grid-template-columns: 1fr; gap: 36px; }
+  .diferenciais-introducao { padding-top: 0; }
+  .diferenciais-quebra { display: none; }
+  .diferenciais-introducao h2 { max-width: 420px; }
+  .diferenciais-introducao .descricao { max-width: 520px; margin-block: 22px 24px; }
+  .diferenciais-lista li { grid-template-columns: 40px minmax(0, 1fr); gap: 8px 16px; padding-block: 24px; }
+  .diferenciais-icone { width: 40px; height: 40px; grid-row: 1 / 3; }
+  .diferenciais-numero { padding: 0; }
+  .diferenciais-lista li > div { grid-column: 2; }
+  .diferenciais-lista h3 { font-size: 19px; }
+  .diferenciais-lista p { font-size: 14px; }
+}
+@media (max-width: 479px) {
+  .diferenciais-botao { width: 100%; min-height: 52px; }
+}
