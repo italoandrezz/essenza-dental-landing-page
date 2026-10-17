@@ -1,4 +1,5 @@
-﻿import { contato, whatsappDoTratamento } from '../config/contato'
+﻿import { Imagem } from './Imagem'
+import { contato, whatsappDoTratamento } from '../config/contato'
 import { tratamentos } from '../dados/tratamentos'
 import { Icone } from './Icone'
 import './Tratamentos.css'
@@ -20,7 +21,7 @@ export function Tratamentos() {
             <li key={tratamento.nome}>
               <a className="tratamento-cartao" href={whatsappDoTratamento(tratamento.nome)} target="_blank" rel="noopener noreferrer">
                 <div className="tratamento-foto">
-                  <img src={`/imagens/${tratamento.imagem}`} alt="" width={tratamento.largura} height={tratamento.altura} style={{ objectPosition: tratamento.posicao }} loading="lazy" />
+                  <Imagem sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 72px) / 2), 360px" src={`/imagens/${tratamento.imagem}`} alt="" width={tratamento.largura} height={tratamento.altura} style={{ objectPosition: tratamento.posicao }} loading="lazy" />
                   <span className="tratamento-numero" aria-hidden="true">{String(indice + 1).padStart(2, '0')}</span>
                 </div>
                 <div className="tratamento-conteudo">
@@ -37,4 +38,5 @@ export function Tratamentos() {
     </section>
   )
 }
+
 

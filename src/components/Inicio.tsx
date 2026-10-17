@@ -1,4 +1,5 @@
-﻿import { contato } from '../config/contato'
+﻿import { Imagem } from './Imagem'
+import { contato } from '../config/contato'
 import { Icone } from './Icone'
 import './Inicio.css'
 
@@ -24,7 +25,7 @@ export function Inicio() {
         </div>
         <div className="inicio-visual">
           <figure className="foto-clinica">
-            <img src="/imagens/clinica-provisoria.jpg" alt="Consultório odontológico iluminado, com cadeira e equipamentos — imagem ilustrativa." width="1100" height="735" fetchPriority="high" />
+            <Imagem sizes="(max-width: 479px) calc(100vw - 48px), (max-width: 767px) 460px, (max-width: 1023px) calc((100vw - 80px) / 2), 500px" src="/imagens/clinica-provisoria.webp" alt="Consultório odontológico iluminado, com cadeira e equipamentos — imagem ilustrativa." width={1100} height={735} fetchPriority="high" />
             <figcaption className="somente-leitor">Imagem provisória; não representa as instalações da Essenza.</figcaption>
           </figure>
           <div className="selo-atendimento"><Icone nome="escudo" /><span>Atendimento seguro</span></div>
@@ -34,4 +35,5 @@ export function Inicio() {
     </section>
   )
 }
+
 

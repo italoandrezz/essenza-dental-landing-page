@@ -1,4 +1,5 @@
-﻿import { equipe } from '../dados/equipe'
+﻿import { Imagem } from './Imagem'
+import { equipe } from '../dados/equipe'
 import './Equipe.css'
 
 export function Equipe() {
@@ -15,7 +16,7 @@ export function Equipe() {
             <li key={profissional.id}>
               <figure>
                 <div className="equipe-retrato">
-                  <img src={`/imagens/${profissional.imagem}`} alt={`Foto ilustrativa para o perfil fictício de ${profissional.nome}.`} width={profissional.largura} height={profissional.altura} style={{ objectPosition: profissional.posicao }} loading="lazy" />
+                  <Imagem sizes="(max-width: 599px) min(400px, calc(100vw - 32px)), (max-width: 1023px) calc((100vw - 72px) / 2), 360px" src={`/imagens/${profissional.imagem}`} alt={`Foto ilustrativa para o perfil fictício de ${profissional.nome}.`} width={profissional.largura} height={profissional.altura} style={{ objectPosition: profissional.posicao }} loading="lazy" />
                   <span className="equipe-numero" aria-hidden="true">{String(indice + 1).padStart(2, '0')}</span>
                 </div>
                 <figcaption><h3>{profissional.nome}</h3><p>{profissional.especialidade}</p></figcaption>
@@ -28,3 +29,4 @@ export function Equipe() {
     </section>
   )
 }
+
