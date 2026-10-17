@@ -16,11 +16,14 @@ A seção “Cuidado que deixa marcas bonitas” apresenta um carrossel manual c
 
 A seção “Informação também é uma forma de cuidado” reúne seis perguntas frequentes em um acordeão: a primeira resposta começa aberta, somente uma pode ficar aberta por vez e todas podem ser recolhidas. O link “Dúvidas” no menu leva à seção, e o contato complementar abre o WhatsApp.
 
-As próximas etapas incluem as fotos e identidade definitivas, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
+A seção “Vamos cuidar de você?” completa o contato com botão de agendamento, telefone clicável, endereço e horários demonstrativos. O item “Contato” do menu leva à seção. O rodapé reúne a identidade da Essenza, navegação pelas seções, links dos seis tratamentos para o WhatsApp e retorno ao início.
+
+As próximas etapas incluem a apresentação da equipe, as fotos e identidade definitivas e a revisão final de conteúdo, comportamento e fidelidade ao vídeo. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
 
 ## Contato e conteúdo provisório
 
 - O WhatsApp é configurado em `src/config/contato.ts`: `+55 (81) 98567-6610`.
+- Endereço, horários e modalidade de atendimento ficam em `src/dados/informacoesClinica.ts`. O endereço e os horários são demonstrativos, baseados no vídeo, e devem ser substituídos pelos dados oficiais antes da publicação. Não há link de mapa para um endereço fictício.
 - A foto é ilustrativa e não representa as instalações da Essenza. Foi obtida por meio desta [imagem do Unsplash](https://images.unsplash.com/photo-1629909613654-28e377c37b09) e está armazenada localmente em `public/imagens/clinica-provisoria.jpg`. Substitua-a pela fotografia oficial antes da publicação definitiva.
 - Os indicadores `12+`, `3 mil` e `4,9` reproduzem o vídeo de referência. Confirme os dados antes da publicação definitiva.
 - Os nomes e relatos em `src/dados/experiencias.ts` são fictícios, identificados na interface como conteúdo de apresentação. Substitua-os por depoimentos reais e autorizados antes da publicação definitiva. As estrelas também são demonstrativas.
@@ -37,6 +40,7 @@ As próximas etapas incluem as fotos e identidade definitivas, seção de contat
 - Os diferenciais usam introdução e lista lado a lado a partir de 768 px; no celular, o conteúdo fica em uma coluna e o botão ocupa a largura disponível nas telas menores.
 - O carrossel de experiências adapta os textos e espaçamentos ao celular e ao tablet, com botões de pelo menos 44 px. O menu permite rolagem em telas baixas, inclusive em paisagem.
 - As perguntas frequentes apresentam introdução e respostas lado a lado a partir de 768 px e uma coluna no celular. Os botões aceitam Enter e Espaço; as setas para cima/baixo, Home e End movem o foco entre as perguntas, mantendo Tab disponível para a navegação normal.
+- O contato usa duas colunas a partir de 768 px e uma no celular. O botão ocupa a largura disponível nas telas menores. O rodapé reorganiza suas quatro colunas em duas no tablet e mantém apresentação e contato em largura total no celular.
 
 Valide também o fechamento do menu por teclado, as âncoras, o carregamento da foto e a ausência de rolagem horizontal. Os links externos informam a abertura de outra aba às tecnologias assistivas.
 
@@ -50,7 +54,9 @@ O carrossel de experiências foi validado nas mesmas larguras e em paisagem (844
 
 O acordeão de perguntas frequentes também foi validado nessas sete larguras e em paisagem: estado inicial, abertura única, recolhimento de todas as respostas, Enter, Espaço, setas, Home, End, associação entre controles e respostas, link de contato e acesso pelo menu. Não houve rolagem horizontal nem erros de execução.
 
-Os links de seção apontam para o início do conteúdo, evitando somar o espaçamento interno ao espaço reservado ao cabeçalho. A distância de chegada é responsiva, e a última seção tem altura mínima de uma tela para permitir o alinhamento mesmo com pouco conteúdo. A navegação pelas seis âncoras e o acesso direto por URL foram verificados de 320 a 1920 px, incluindo rolagem suave e preferência por movimento reduzido.
+Os links de seção apontam para o início do conteúdo, evitando somar o espaçamento interno ao espaço reservado ao cabeçalho. A distância de chegada é responsiva, e a altura mínima da última seção considera o espaço ocupado pelo rodapé para manter o alinhamento. A navegação pelas âncoras e o acesso direto por URL foram verificados de 320 a 1920 px, incluindo rolagem suave e preferência por movimento reduzido.
+
+Contato e rodapé foram verificados em 320, 390, 600, 768, 820, 1024, 1440 e 1920 px e em paisagem (844 × 390 px). Foram conferidos o layout, as sete âncoras, o retorno ao início, o fechamento do menu, os destinos do telefone e do WhatsApp, os seis tratamentos e o foco, sem rolagem horizontal ou erros de execução. Nenhuma ligação ou mensagem foi enviada durante os testes.
 
 ## Desenvolvimento local
 
@@ -130,6 +136,9 @@ README, documentação, mensagens de commit, títulos e descrições de pull req
 - `src/components/Diferenciais.tsx`: apresentação dos diferenciais da clínica.
 - `src/components/Experiencias.tsx`: carrossel acessível da seção de experiências.
 - `src/components/PerguntasFrequentes.tsx`: acordeão acessível das perguntas frequentes.
+- `src/components/Contato.tsx`: agendamento e informações de atendimento.
+- `src/components/Rodape.tsx`: navegação e contatos no final da página.
+- `src/dados/informacoesClinica.ts`: endereço e horários demonstrativos.
 - `src/dados/perguntasFrequentes.ts`: perguntas e respostas editáveis.
 - `src/dados/experiencias.ts`: depoimentos fictícios para apresentação do layout.
 - `src/dados/tratamentos.ts`: nomes, descrições e imagens dos tratamentos.
