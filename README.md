@@ -66,7 +66,7 @@ public/
 
 As fotos são ilustrativas, do Unsplash. Nomes, especialidades, depoimentos, endereço, horários e indicadores são demonstrativos. Para uso por uma clínica real, substitua esses dados e confirme a identidade visual.
 
-O e-mail do rodapé segue a referência visual. Preencha `instagram` com a URL do perfil para ativar o link; enquanto estiver vazio, apenas o nome e o ícone são exibidos.
+O e-mail do rodapé segue a referência visual. O Instagram aponta para o site oficial da plataforma, pois a clínica é fictícia; o endereço pode ser alterado em `src/config/contato.ts`.
 
 ## Paleta de cores
 
