@@ -55,12 +55,13 @@ export function Cabecalho() {
         <a href="#diferenciais" onClick={() => definirMenuAberto(false)}>Diferenciais</a>
         <a href="#experiencias" onClick={() => definirMenuAberto(false)}>Experiências</a>
         <a href="#perguntas-frequentes" onClick={() => definirMenuAberto(false)}>Dúvidas</a>
-        <a href={contato.whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => definirMenuAberto(false)}>Contato <span className="somente-leitor">pelo WhatsApp (abre em outra aba)</span></a>
+        <a href="#contato" onClick={() => definirMenuAberto(false)}>Contato</a>
         <a className="botao agendar-cabecalho" href={contato.whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => definirMenuAberto(false)}>Agendar consulta <Icone nome="seta" /><span className="somente-leitor">pelo WhatsApp (abre em outra aba)</span></a>
       </nav>
     </header>
   )
 }
+
 
 
 
