@@ -52,7 +52,11 @@ export function PerguntasFrequentes() {
                     <svg className="perguntas-seta" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
                   </button>
                 </h3>
-                <div className="perguntas-resposta" id={idResposta} role="region" aria-labelledby={idBotao} hidden={!aberta}><p>{item.resposta}</p></div>
+                <div className={`perguntas-painel${aberta ? ' perguntas-painel-aberto' : ''}`} id={idResposta} role="region" aria-labelledby={idBotao} aria-hidden={!aberta} inert={!aberta}>
+                  <div className="perguntas-recorte">
+                    <div className="perguntas-resposta"><p>{item.resposta}</p></div>
+                  </div>
+                </div>
               </div>
             )
           })}
