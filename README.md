@@ -4,27 +4,39 @@ Landing page da clínica Essenza, desenvolvida com React, TypeScript e Vite a pa
 
 ## Estado atual
 
-O projeto inclui a paleta oficial, um cabeçalho fixo durante a rolagem, menu recolhível em celulares e tablets, seção inicial com foto, cartões sobrepostos, indicadores e apresentação da clínica. Os botões de agendamento e contato abrem o WhatsApp informado pelo responsável.
+O projeto inclui a paleta oficial, um cabeçalho fixo durante a rolagem, menu recolhível em celulares e tablets, seção inicial com foto, cartões sobrepostos e indicadores. A apresentação da clínica contém um mosaico de fotos e um cartão sobre sua filosofia de cuidado. A seção de tratamentos reúne Ortodontia, Clareamento, Implantes, Estética dental, Clínica geral e Prevenção.
+
+Os botões de agendamento e contato abrem o WhatsApp informado pelo responsável. Cada cartão de tratamento abre uma mensagem específica sobre a especialidade escolhida. O menu inclui os links para a clínica e os tratamentos.
 
 O menu fecha ao selecionar uma seção, clicar fora, pressionar Escape ou ampliar a tela para desktop. O layout respeita a preferência por movimento reduzido e oferece navegação por teclado e acesso direto ao conteúdo.
 
-As próximas etapas incluem as fotos e identidade definitivas, tratamentos, diferenciais, depoimentos, perguntas frequentes, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
+A seção “O extraordinário mora nos detalhes” apresenta os quatro diferenciais da Essenza: atendimento personalizado, tecnologia moderna, conforto em cada visita e cuidado humanizado. O menu leva à seção, e o botão “Viva essa experiência” abre o WhatsApp.
+
+As próximas etapas incluem as fotos e identidade definitivas, depoimentos, perguntas frequentes, seção de contato e rodapé. Os itens correspondentes serão adicionados ao menu conforme essas seções forem implementadas. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
 
 ## Contato e conteúdo provisório
 
 - O WhatsApp é configurado em `src/config/contato.ts`: `+55 (81) 98567-6610`.
 - A foto é ilustrativa e não representa as instalações da Essenza. Foi obtida por meio desta [imagem do Unsplash](https://images.unsplash.com/photo-1629909613654-28e377c37b09) e está armazenada localmente em `public/imagens/clinica-provisoria.jpg`. Substitua-a pela fotografia oficial antes da publicação definitiva.
 - Os indicadores `12+`, `3 mil` e `4,9` reproduzem o vídeo de referência. Confirme os dados antes da publicação definitiva.
+- As imagens adicionais também são provisórias: [ambiente odontológico](https://images.unsplash.com/photo-1629909615184-74f495363b67), [atendimento](https://images.unsplash.com/photo-1606811841689-23dfddce3e95) e [prevenção](https://images.unsplash.com/photo-1606811971618-4486d14f3f99). Estão armazenadas em `public/imagens/` e não representam a equipe ou os espaços reais da Essenza.
 
 ## Responsividade
 
 - Celular: conteúdo em uma coluna, foto abaixo do texto e botões maiores nas telas mais estreitas.
 - Tablet: menu recolhível e seção inicial em duas colunas a partir de 768 px.
 - Desktop: navegação expandida a partir de 1024 px e foto ao lado do texto.
+- O mosaico da clínica usa três colunas no desktop e se reorganiza em duas no tablet; no celular, a foto principal e o texto ocupam a largura disponível.
+- A grade de tratamentos usa uma coluna abaixo de 600 px, duas entre 600 e 1023 px e três a partir de 1024 px.
+- Os diferenciais usam introdução e lista lado a lado a partir de 768 px; no celular, o conteúdo fica em uma coluna e o botão ocupa a largura disponível nas telas menores.
 
 Valide também o fechamento do menu por teclado, as âncoras, o carregamento da foto e a ausência de rolagem horizontal. Os links externos informam a abertura de outra aba às tecnologias assistivas.
 
 Nesta etapa, essas verificações passaram em navegador Chromium nas larguras de 320, 390, 600, 768, 820, 1024 e 1440 px, sem erros de execução. Também foram conferidos o fechamento ao clicar fora ou redimensionar a tela e o respeito ao movimento reduzido. Os testes não enviam mensagens ao WhatsApp.
+
+As novas seções foram verificadas nas mesmas sete larguras: carregamento das fotos, quantidade de colunas, âncora de tratamentos, fechamento do menu e conteúdo das seis mensagens do WhatsApp, sem rolagem horizontal ou erros de execução.
+
+A seção de diferenciais também foi validada nessas sete larguras: quatro itens presentes, uma ou duas colunas conforme a tela, navegação pela âncora, fechamento do menu, foco por teclado e endereço do WhatsApp, sem rolagem horizontal ou erros de execução.
 
 ## Desenvolvimento local
 
@@ -67,9 +79,11 @@ git commit -m "Adiciona os componentes da seção de tratamentos"
 git push origin develop
 ```
 
-Abra um pull request de `develop` para `main`, preencha o template e aguarde a verificação automática. Integre criando um commit de merge, preservando os commits individuais da etapa. Escreva também a mensagem do merge em português. Preserve a branch `develop` após o merge.
+Acumule as etapas na `develop`, com commits separados por mudança. Não abra pull requests para a `main` a cada etapa.
 
-Antes de iniciar a próxima etapa, sincronize as duas branches sem reescrever o histórico:
+Somente quando o projeto estiver completo e validado, abra o pull request final de `develop` para `main`. Preencha o template, aguarde a verificação automática e integre criando um commit de merge, preservando os commits individuais. Escreva também a mensagem do merge em português. Preserve a branch `develop` e crie a tag `v1.0.0` e a release com notas em português após a integração final.
+
+Quando houver uma integração autorizada à `main`, sincronize a `develop` sem reescrever o histórico:
 
 ```bash
 git fetch origin
@@ -96,6 +110,10 @@ README, documentação, mensagens de commit, títulos e descrições de pull req
 
 - `src/App.tsx`: composição inicial da página.
 - `src/components/`: cabeçalho, seção inicial e ícones compartilhados.
+- `src/components/Clinica.tsx`: apresentação e mosaico de fotos da clínica.
+- `src/components/Tratamentos.tsx`: grade de tratamentos com links para o WhatsApp.
+- `src/components/Diferenciais.tsx`: apresentação dos diferenciais da clínica.
+- `src/dados/tratamentos.ts`: nomes, descrições e imagens dos tratamentos.
 - `src/config/contato.ts`: número e endereço de agendamento pelo WhatsApp.
 - `src/index.css`: paleta, estilos globais e elementos compartilhados.
 - `src/App.css`: estilos das seções e adaptação a telas menores.
