@@ -8,6 +8,7 @@ const anoAtual = new Date().getFullYear()
 const secoes = [
   { nome: 'A clínica', destino: '#clinica' },
   { nome: 'Tratamentos', destino: '#tratamentos' },
+  { nome: 'Equipe', destino: '#equipe' },
   { nome: 'Diferenciais', destino: '#diferenciais' },
   { nome: 'Experiências', destino: '#experiencias' },
   { nome: 'Dúvidas', destino: '#perguntas-frequentes' },
@@ -46,3 +47,4 @@ export function Rodape() {
     </footer>
   )
 }
+

@@ -3,6 +3,7 @@ import { Icone } from './components/Icone'
 import { Inicio } from './components/Inicio'
 import { Clinica } from './components/Clinica'
 import { Tratamentos } from './components/Tratamentos'
+import { Equipe } from './components/Equipe'
 import { Diferenciais } from './components/Diferenciais'
 import { Experiencias } from './components/Experiencias'
 import { PerguntasFrequentes } from './components/PerguntasFrequentes'
@@ -20,6 +21,7 @@ function App() {
         <Inicio />
         <Clinica />
         <Tratamentos />
+        <Equipe />
         <Diferenciais />
         <Experiencias />
         <PerguntasFrequentes />
@@ -32,6 +34,7 @@ function App() {
 }
 
 export default App
+
 
 
 

@@ -18,7 +18,9 @@ A seção “Informação também é uma forma de cuidado” reúne seis pergunt
 
 A seção “Vamos cuidar de você?” completa o contato com botão de agendamento, telefone clicável, endereço e horários demonstrativos. O item “Contato” do menu leva à seção. O rodapé reúne a identidade da Essenza, navegação pelas seções, links dos seis tratamentos para o WhatsApp e retorno ao início.
 
-As próximas etapas incluem a apresentação da equipe, as fotos e identidade definitivas e a revisão final de conteúdo, comportamento e fidelidade ao vídeo. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
+A seção “Especialistas que escutam, acolhem e cuidam” apresenta três perfis fictícios, com fotos em arco, nomes e especialidades. Fica entre tratamentos e diferenciais, conforme o vídeo. Os links “Equipe” no menu e no rodapé levam ao início do conteúdo, abaixo do cabeçalho.
+
+As próximas etapas incluem as fotos e identidade definitivas e a revisão final de conteúdo, comportamento e fidelidade ao vídeo. A fonte e o símbolo da marca são provisórios até a confirmação dos arquivos originais.
 
 ## Contato e conteúdo provisório
 
@@ -27,6 +29,7 @@ As próximas etapas incluem a apresentação da equipe, as fotos e identidade de
 - A foto é ilustrativa e não representa as instalações da Essenza. Foi obtida por meio desta [imagem do Unsplash](https://images.unsplash.com/photo-1629909613654-28e377c37b09) e está armazenada localmente em `public/imagens/clinica-provisoria.jpg`. Substitua-a pela fotografia oficial antes da publicação definitiva.
 - Os indicadores `12+`, `3 mil` e `4,9` reproduzem o vídeo de referência. Confirme os dados antes da publicação definitiva.
 - Os nomes e relatos em `src/dados/experiencias.ts` são fictícios, identificados na interface como conteúdo de apresentação. Substitua-os por depoimentos reais e autorizados antes da publicação definitiva. As estrelas também são demonstrativas.
+- Os perfis em `src/dados/equipe.ts` também são fictícios. As fotos ilustrativas vêm do Unsplash: [perfil de Helena](https://images.unsplash.com/photo-1559839734-2b71ea197ec2), [perfil de Rafael](https://images.unsplash.com/photo-1622253692010-333f2da6031d) e [perfil de Laura](https://images.unsplash.com/photo-1594824476967-48c8b964273f). As pessoas fotografadas não representam os profissionais nomeados ou a equipe real da clínica. Substitua fotos, nomes e especialidades antes da publicação definitiva.
 - As perguntas e respostas ficam em `src/dados/perguntasFrequentes.ts`. O conteúdo é provisório e deve ser confirmado pela clínica antes da publicação, especialmente informações sobre convênios, pagamentos e disponibilidade de atendimento. Nenhuma lista de convênios ou condição de pagamento foi presumida.
 - As imagens adicionais também são provisórias: [ambiente odontológico](https://images.unsplash.com/photo-1629909615184-74f495363b67), [atendimento](https://images.unsplash.com/photo-1606811841689-23dfddce3e95) e [prevenção](https://images.unsplash.com/photo-1606811971618-4486d14f3f99). Estão armazenadas em `public/imagens/` e não representam a equipe ou os espaços reais da Essenza.
 
@@ -34,13 +37,14 @@ As próximas etapas incluem a apresentação da equipe, as fotos e identidade de
 
 - Celular: conteúdo em uma coluna, foto abaixo do texto e botões maiores nas telas mais estreitas.
 - Tablet: menu recolhível e seção inicial em duas colunas a partir de 768 px.
-- Desktop: navegação expandida a partir de 1024 px e foto ao lado do texto.
+- Desktop: foto ao lado do texto e navegação expandida a partir de 1200 px. Em telas menores, incluindo desktop compacto, o menu fica recolhível para evitar sobreposição de links.
 - O mosaico da clínica usa três colunas no desktop e se reorganiza em duas no tablet; no celular, a foto principal e o texto ocupam a largura disponível.
 - A grade de tratamentos usa uma coluna abaixo de 600 px, duas entre 600 e 1023 px e três a partir de 1024 px.
 - Os diferenciais usam introdução e lista lado a lado a partir de 768 px; no celular, o conteúdo fica em uma coluna e o botão ocupa a largura disponível nas telas menores.
 - O carrossel de experiências adapta os textos e espaçamentos ao celular e ao tablet, com botões de pelo menos 44 px. O menu permite rolagem em telas baixas, inclusive em paisagem.
 - As perguntas frequentes apresentam introdução e respostas lado a lado a partir de 768 px e uma coluna no celular. Os botões aceitam Enter e Espaço; as setas para cima/baixo, Home e End movem o foco entre as perguntas, mantendo Tab disponível para a navegação normal.
 - O contato usa duas colunas a partir de 768 px e uma no celular. O botão ocupa a largura disponível nas telas menores. O rodapé reorganiza suas quatro colunas em duas no tablet e mantém apresentação e contato em largura total no celular.
+- A equipe usa uma coluna abaixo de 600 px, duas entre 600 e 1023 px com o terceiro perfil centralizado, e três a partir de 1024 px. No desktop, o perfil central fica levemente deslocado para baixo, como na referência.
 
 Valide também o fechamento do menu por teclado, as âncoras, o carregamento da foto e a ausência de rolagem horizontal. Os links externos informam a abertura de outra aba às tecnologias assistivas.
 
@@ -57,6 +61,8 @@ O acordeão de perguntas frequentes também foi validado nessas sete larguras e 
 Os links de seção apontam para o início do conteúdo, evitando somar o espaçamento interno ao espaço reservado ao cabeçalho. A distância de chegada é responsiva, e a altura mínima da última seção considera o espaço ocupado pelo rodapé para manter o alinhamento. A navegação pelas âncoras e o acesso direto por URL foram verificados de 320 a 1920 px, incluindo rolagem suave e preferência por movimento reduzido.
 
 Contato e rodapé foram verificados em 320, 390, 600, 768, 820, 1024, 1440 e 1920 px e em paisagem (844 × 390 px). Foram conferidos o layout, as sete âncoras, o retorno ao início, o fechamento do menu, os destinos do telefone e do WhatsApp, os seis tratamentos e o foco, sem rolagem horizontal ou erros de execução. Nenhuma ligação ou mensagem foi enviada durante os testes.
+
+A equipe e a navegação foram verificadas em 320, 390, 600, 768, 820, 1024, 1199, 1200, 1440 e 1920 px, além de paisagem (844 × 390 px). Foram conferidos o carregamento das fotos, os textos alternativos, a quantidade de colunas, as âncoras do menu e do rodapé, o acesso direto por URL, Escape com retorno de foco e o fechamento do menu ao ampliar para 1200 px. Não houve rolagem horizontal ou erros de execução.
 
 ## Desenvolvimento local
 
@@ -133,6 +139,8 @@ README, documentação, mensagens de commit, títulos e descrições de pull req
 - `src/components/`: cabeçalho, seção inicial e ícones compartilhados.
 - `src/components/Clinica.tsx`: apresentação e mosaico de fotos da clínica.
 - `src/components/Tratamentos.tsx`: grade de tratamentos com links para o WhatsApp.
+- `src/components/Equipe.tsx`: apresentação dos três perfis fictícios.
+- `src/dados/equipe.ts`: nomes, especialidades e fotos provisórias da equipe.
 - `src/components/Diferenciais.tsx`: apresentação dos diferenciais da clínica.
 - `src/components/Experiencias.tsx`: carrossel acessível da seção de experiências.
 - `src/components/PerguntasFrequentes.tsx`: acordeão acessível das perguntas frequentes.
