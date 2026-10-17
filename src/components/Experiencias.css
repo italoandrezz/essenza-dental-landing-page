@@ -5,7 +5,7 @@
 .experiencias-carrossel { max-width: 800px; margin: 48px auto 0; }
 .experiencias-ornamento { display: inline-flex; gap: 8px; margin-bottom: 28px; color: #b5ded4; }
 .experiencias-ornamento svg { width: 14px; height: 14px; }
-.experiencias-relato { min-height: 232px; }
+.experiencias-relato { min-height: 300px; }
 .experiencias-relato figure { margin: 0; }
 .experiencias-relato blockquote { margin: 0; }
 .experiencias-relato blockquote p { font-size: clamp(24px, 2.3vw, 31px); font-weight: 400; line-height: 1.65; letter-spacing: -.9px; text-wrap: pretty; }
@@ -22,3 +22,27 @@
 .experiencias-indicadores button { width: 44px; border: 0; border-radius: 8px; }
 .experiencias-indicadores span { width: 22px; height: 3px; border-radius: 4px; background: rgb(255 255 255 / 35%); transition: width 180ms ease, background-color 180ms ease; }
 .experiencias-indicadores button[aria-pressed='true'] span { width: 36px; background: #b5ded4; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .experiencias { padding-block: 80px 64px; }
+  .experiencias-carrossel { max-width: 680px; margin-top: 40px; }
+  .experiencias-relato { min-height: 280px; }
+}
+@media (max-width: 767px) {
+  .experiencias { padding-block: 56px 88px; }
+  .experiencias-quebra { display: none; }
+  .experiencias h2 { max-width: 500px; }
+  .experiencias-carrossel { margin-top: 32px; }
+  .experiencias-relato { min-height: 300px; }
+  .experiencias-relato blockquote p { font-size: 25px; line-height: 1.6; letter-spacing: -.6px; }
+  .experiencias-relato figcaption { margin-top: 28px; }
+  .experiencias-controles { gap: 12px; margin-top: 24px; }
+}
+@media (max-width: 479px) {
+  .experiencias-relato { min-height: 380px; }
+  .experiencias-relato blockquote p { font-size: 24px; }
+  .experiencias-contexto { max-width: 220px; }
+}
+
+.experiencias-ornamento { font-size: 15px; letter-spacing: 5px; }
+.experiencias-marca { font-size: 12px; font-weight: 600; }

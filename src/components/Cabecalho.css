@@ -38,3 +38,13 @@
   .marca { font-size: 23px; }
   .marca-simbolo { width: 36px; height: 36px; }
 }
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .cabecalho { gap: 20px; }
+  .navegacao { gap: 18px; }
+  .navegacao > a:not(.botao) { font-size: 12px; }
+  .navegacao .agendar-cabecalho { margin-left: 8px; padding-inline: 14px; }
+}
+@media (max-width: 1023px) {
+  .navegacao { max-height: calc(100dvh - 120px); overflow-y: auto; overscroll-behavior: contain; }
+}
